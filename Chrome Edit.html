@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dr. Alex Alba · ALAY Aesthetic Medicine · Medicina Estética Premium en Roma Sur, CDMX.">
+  <title>Dr. Alex Alba · ALAY Aesthetic Medicine | Roma Sur CDMX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+    <defs>
+      <symbol id="b-logo" viewBox="0 0 32 32">
+        <circle cx="16" cy="16" r="2.5" fill="hsl(192,90%,60%)"/>
+        <circle cx="16" cy="5"  r="1.8" fill="hsl(192,90%,60%)" opacity=".6"/>
+        <circle cx="16" cy="27" r="1.8" fill="hsl(192,90%,60%)" opacity=".6"/>
+        <circle cx="5"  cy="16" r="1.8" fill="hsl(192,90%,60%)" opacity=".6"/>
+        <circle cx="27" cy="16" r="1.8" fill="hsl(192,90%,60%)" opacity=".6"/>
+        <circle cx="7.5"  cy="7.5"  r="1.3" fill="hsl(192,90%,60%)" opacity=".4"/>
+        <circle cx="24.5" cy="7.5"  r="1.3" fill="hsl(192,90%,60%)" opacity=".4"/>
+        <circle cx="7.5"  cy="24.5" r="1.3" fill="hsl(192,90%,60%)" opacity=".4"/>
+        <circle cx="24.5" cy="24.5" r="1.3" fill="hsl(192,90%,60%)" opacity=".4"/>
+        <line x1="16" y1="7" x2="16" y2="13.5" stroke="hsl(192,90%,60%)" stroke-width=".7" opacity=".4"/>
+        <line x1="16" y1="18.5" x2="16" y2="25" stroke="hsl(192,90%,60%)" stroke-width=".7" opacity=".4"/>
+        <line x1="7" y1="16" x2="13.5" y2="16" stroke="hsl(192,90%,60%)" stroke-width=".7" opacity=".4"/>
+        <line x1="18.5" y1="16" x2="25" y2="16" stroke="hsl(192,90%,60%)" stroke-width=".7" opacity=".4"/>
+        <line x1="9" y1="9" x2="13.5" y2="13.5" stroke="hsl(192,90%,60%)" stroke-width=".5" opacity=".25"/>
+        <line x1="18.5" y1="18.5" x2="23" y2="23" stroke="hsl(192,90%,60%)" stroke-width=".5" opacity=".25"/>
+        <line x1="23" y1="9" x2="18.5" y2="13.5" stroke="hsl(192,90%,60%)" stroke-width=".5" opacity=".25"/>
+        <line x1="9" y1="23" x2="13.5" y2="18.5" stroke="hsl(192,90%,60%)" stroke-width=".5" opacity=".25"/>
+      </symbol>
+      <symbol id="b-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="b-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="b-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a9 9 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413A11.815 11.815 0 0012.05 0z" fill="currentColor"/></symbol>
+    </defs>
+  </svg>
+<style>
+/* ============================================================
+   VARIANTE B — CHROME EDIT
+   Estética: Editorial de moda + clínica quirúrgica del futuro.
+   Blanco clínico + grafito profundo + cyan eléctrico como acento.
+   Referencia: Recode NYC, clínicas de Gangnam-gu, Vogue editorial.
+   Tipografía: DM Serif Display (editorial) + Space Grotesk (técnica)
+   ============================================================ */
+:root {
+  --white:     hsl(0, 0%, 100%);
+  --off:       hsl(210, 15%, 97%);
+  --gray-50:   hsl(210, 12%, 94%);
+  --gray-100:  hsl(210, 10%, 88%);
+  --gray-200:  hsl(210, 8%, 75%);
+  --gray-400:  hsl(210, 6%, 52%);
+  --gray-600:  hsl(210, 8%, 32%);
+  --gray-800:  hsl(210, 10%, 16%);
+  --gray-900:  hsl(210, 12%, 10%);
+  --gray-950:  hsl(210, 14%, 6%);
+
+  --cyan:      hsl(192, 90%, 60%);
+  --cyan-lt:   hsl(192, 95%, 75%);
+  --cyan-dk:   hsl(192, 80%, 42%);
+  --cyan-dim:  hsl(192, 70%, 30%);
+
+  --bg:       var(--white);
+  --surface:  var(--off);
+  --surface-2:var(--gray-50);
+  --text-1:   var(--gray-900);
+  --text-2:   var(--gray-600);
+  --text-3:   var(--gray-400);
+  --text-4:   var(--gray-200);
+  --accent:   var(--cyan);
+  --accent-lt:var(--cyan-lt);
+  --accent-dk:var(--cyan-dk);
+  --border:   var(--gray-100);
+  --border-a: var(--gray-100);
+
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body:    'Space Grotesk', system-ui, sans-serif;
+
+  --sp-1:0.5rem;--sp-2:1rem;--sp-3:1.5rem;--sp-4:2rem;
+  --sp-5:2.5rem;--sp-6:3rem;--sp-8:4rem;--sp-10:5rem;
+  --sp-12:6rem;--sp-16:8rem;
+
+  --shadow-sm:0 1px 12px hsl(210 10% 50%/.08);
+  --shadow-md:0 6px 40px hsl(210 10% 40%/.12);
+  --shadow-lg:0 20px 60px hsl(210 10% 30%/.14);
+  --glow-cyan:0 0 40px hsl(192 90% 60%/.25),0 0 80px hsl(192 90% 60%/.12);
+
+  --r-sm:4px;--r-md:8px;--r-lg:14px;--r-xl:20px;--r-pill:999px;
+  --ease:cubic-bezier(0.16,1,0.3,1);
+  --z-nav:100;--z-lift:10;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);font-weight:300;background:var(--bg);color:var(--text-1);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+
+.skip{position:absolute;top:-100%;left:1rem;padding:.5rem 1.5rem;background:var(--accent);color:var(--gray-950);font-size:.875rem;font-weight:600;border-radius:var(--r-md);z-index:200;transition:top .2s;}
+.skip:focus{top:.5rem;}
+
+/* Grid decorativo de fondo sutil */
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(var(--gray-100) 1px,transparent 1px),linear-gradient(90deg,var(--gray-100) 1px,transparent 1px);background-size:80px 80px;opacity:.35;pointer-events:none;z-index:0;}
+body>*{position:relative;z-index:1;}
+
+/* ===== TIPOGRAFÍA ===== */
+.t-display{font-family:var(--font-display);font-weight:400;line-height:1.05;letter-spacing:-.02em;}
+.t-display--xl{font-size:clamp(3rem,7.5vw,6.5rem);}
+.t-display--lg{font-size:clamp(1.9rem,4.2vw,3.4rem);}
+.t-eyebrow{font-family:var(--font-body);font-size:.6rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);}
+.t-body{font-size:clamp(.95rem,1.3vw,1.05rem);line-height:1.8;color:var(--text-2);}
+
+/* ===== LOGO ===== */
+.logo{display:inline-flex;align-items:center;gap:.75rem;text-decoration:none;}
+.logo__icon{width:26px;height:26px;flex-shrink:0;}
+.logo__name{font-family:var(--font-display);font-size:1.05rem;font-weight:400;color:var(--text-1);}
+.logo__sub{font-size:.52rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);}
+
+/* ===== BOTONES ===== */
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 2rem;border-radius:var(--r-md);font-family:var(--font-body);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;border:1px solid transparent;transition:background-color .25s var(--ease),border-color .25s var(--ease),color .25s var(--ease),box-shadow .25s var(--ease),transform .25s var(--ease);white-space:nowrap;}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:4px;}
+.btn__icon{width:13px;height:13px;transition:transform .25s var(--ease);flex-shrink:0;}
+.btn:hover .btn__icon{transform:translateX(3px);}
+.btn--solid{background:var(--gray-900);color:var(--white);border-color:var(--gray-900);}
+.btn--solid:hover{background:var(--gray-950);box-shadow:0 6px 24px hsl(210 10% 6%/.3);transform:translateY(-2px);}
+.btn--outline{background:transparent;color:var(--text-1);border-color:var(--border-a);}
+.btn--outline:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px);}
+.btn--cyan{background:var(--cyan);color:var(--gray-950);border-color:var(--cyan);}
+.btn--cyan:hover{background:var(--cyan-lt);box-shadow:var(--glow-cyan);transform:translateY(-2px);}
+.btn--ghost-cyan{background:transparent;color:var(--accent);border-color:var(--accent);}
+.btn--ghost-cyan:hover{background:hsl(192 90% 60%/.08);transform:translateY(-2px);}
+.btn--lg{padding:1.1rem 2.5rem;font-size:.78rem;}
+.btn--full{width:100%;justify-content:center;}
+
+/* ===== CAMPO FORM ===== */
+.field{display:flex;flex-direction:column;gap:5px;}
+.field__label{font-size:.6rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text-3);}
+.field__input,.field__select,.field__textarea{width:100%;padding:.8rem 1rem;border:1px solid var(--border);border-radius:var(--r-md);font-family:var(--font-body);font-size:.875rem;color:var(--text-1);background:var(--white);outline:none;appearance:none;transition:border-color .2s,box-shadow .2s;}
+.field__input::placeholder,.field__textarea::placeholder{color:var(--text-4);}
+.field__input:focus,.field__select:focus,.field__textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px hsl(192 90% 60%/.12);}
+.field__input:focus-visible,.field__select:focus-visible,.field__textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.field__textarea{resize:vertical;min-height:88px;line-height:1.6;}
+
+/* ===== LAYOUT ===== */
+.container{max-width:1200px;margin-inline:auto;padding-inline:clamp(1.5rem,5vw,4rem);}
+
+/* ===== NAV — barra fina con línea inferior de acento ===== */
+.nav{position:fixed;top:0;left:0;right:0;z-index:var(--z-nav);padding:1.2rem 0;transition:background .4s var(--ease),box-shadow .4s var(--ease),padding .3s var(--ease);}
+.nav--scrolled{background:hsl(0 0% 100%/.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 1px 0 var(--border),0 2px 0 hsl(192 90% 60%/.2);padding:.9rem 0;}
+.nav__inner{display:flex;align-items:center;justify-content:space-between;gap:2rem;}
+.nav__links{display:flex;align-items:center;gap:2.5rem;}
+.nav__link{font-size:.68rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-3);transition:color .2s;position:relative;}
+.nav__link::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1.5px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease);}
+.nav__link:hover,.nav__link:focus-visible{color:var(--accent);}
+.nav__link:hover::after,.nav__link:focus-visible::after{transform:scaleX(1);}
+.nav__link:focus-visible{outline:2px solid var(--accent);outline-offset:5px;border-radius:2px;}
+
+/* ===== HERO — Layout asimétrico ===== */
+.hero{min-height:100svh;display:grid;grid-template-columns:55% 45%;padding-top:80px;position:relative;overflow:hidden;background:var(--white);}
+
+.hero__left{display:flex;flex-direction:column;justify-content:center;padding:var(--sp-12) var(--sp-8) var(--sp-12) 0;animation:fadeUp 1s var(--ease) both;}
+.hero__meta{display:flex;align-items:center;gap:var(--sp-3);margin-bottom:var(--sp-5);}
+.hero__meta-line{width:1px;height:40px;background:var(--accent);flex-shrink:0;}
+.hero__meta-text{display:flex;flex-direction:column;gap:2px;}
+.hero__meta-top{font-size:.58rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);}
+.hero__meta-bottom{font-size:.7rem;color:var(--text-3);letter-spacing:.04em;}
+.hero__title{margin-bottom:var(--sp-3);color:var(--text-1);}
+.hero__title em{font-style:italic;color:var(--gray-400);}
+.hero__title .hero__accent-word{display:inline-block;position:relative;}
+.hero__title .hero__accent-word::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--accent);border-radius:2px;}
+.hero__sub{max-width:48ch;margin-bottom:var(--sp-5);}
+.hero__actions{display:flex;align-items:center;gap:var(--sp-3);flex-wrap:wrap;}
+.hero__stats{display:flex;gap:var(--sp-5);margin-top:var(--sp-8);padding-top:var(--sp-5);border-top:1px solid var(--border);}
+.stat__val{font-family:var(--font-display);font-size:2.4rem;font-weight:400;color:var(--text-1);line-height:1;}
+.stat__lbl{font-size:.62rem;color:var(--text-3);letter-spacing:.03em;margin-top:3px;}
+
+/* Panel derecho — imagen editorial con elementos flotantes */
+.hero__right{position:relative;overflow:hidden;background:var(--gray-950);}
+/* Gradiente de fondo técnico */
+.hero__right::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--gray-900) 0%,var(--gray-800) 50%,hsl(192 40% 12%) 100%);}
+.hero__right::after{content:'';position:absolute;top:0;right:0;width:50%;height:50%;background:radial-gradient(ellipse at 80% 20%,hsl(192 90% 60%/.12) 0%,transparent 70%);pointer-events:none;}
+/* Foto doctor */
+.hero__photo{position:absolute;inset:0;overflow:hidden;}
+.hero__photo img{width:100%;height:100%;object-fit:cover;opacity:.35;mix-blend-mode:luminosity;}
+.hero__photo-grad{position:absolute;inset:0;background:linear-gradient(to right,var(--gray-950) 0%,transparent 20%),linear-gradient(to top,var(--gray-950) 0%,transparent 30%);}
+/* Líneas de scan decorativas */
+.hero__scan{position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 3px,hsl(192 90% 60%/.03) 3px,hsl(192 90% 60%/.03) 4px);pointer-events:none;}
+/* Badge circulo aniversario */
+.hero__badge{position:absolute;top:var(--sp-6);right:var(--sp-6);width:88px;height:88px;border-radius:50%;background:transparent;border:1px solid hsl(192 90% 60%/.4);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:var(--glow-cyan);}
+.hero__badge-num{font-family:var(--font-display);font-size:2rem;font-weight:400;color:var(--cyan);line-height:1;}
+.hero__badge-txt{font-size:.44rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:hsl(192 60% 60%);margin-top:2px;}
+/* Tarjeta flotante */
+.hero__card{position:absolute;bottom:var(--sp-8);left:var(--sp-6);right:var(--sp-6);background:hsl(210 12% 6%/.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid hsl(192 90% 60%/.2);border-radius:var(--r-lg);padding:var(--sp-4);animation:fadeUp 1s var(--ease) .4s both;}
+.hero__card-tag{font-size:.55rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:.5rem;}
+.hero__card-name{font-family:var(--font-display);font-size:1.35rem;font-weight:400;color:var(--white);margin-bottom:3px;}
+.hero__card-role{font-size:.7rem;color:hsl(0 0% 100%/.4);}
+.hero__card-pills{display:flex;gap:5px;flex-wrap:wrap;margin-top:.75rem;}
+.pill{font-size:.55rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:var(--r-pill);background:hsl(192 90% 60%/.1);color:var(--cyan);border:1px solid hsl(192 90% 60%/.2);}
+
+/* ===== TICKER — más geométrico ===== */
+.ticker{padding:var(--sp-4) 0;background:var(--gray-950);overflow:hidden;}
+.ticker__track{display:flex;gap:var(--sp-8);width:max-content;animation:ticker-scroll 28s linear infinite;}
+.ticker__item{display:flex;align-items:center;gap:var(--sp-4);white-space:nowrap;font-size:.62rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:hsl(0 0% 100%/.3);}
+.ticker__sep{color:var(--cyan);font-size:.8rem;}
+@media(prefers-reduced-motion:reduce){.ticker__track{animation:none;}.reveal{opacity:1;transform:none;transition:none;}}
+
+/* ===== AUTORIDAD ===== */
+.authority{padding:var(--sp-16) 0;background:var(--bg);}
+.authority__grid{display:grid;grid-template-columns:1.2fr 1fr;gap:var(--sp-12);align-items:center;}
+.blockquote{margin:var(--sp-5) 0;padding:var(--sp-4) var(--sp-5);background:var(--off);border-radius:var(--r-lg);border-left:2px solid var(--accent);position:relative;}
+.blockquote::before{content:'"';position:absolute;top:-10px;left:var(--sp-5);font-family:var(--font-display);font-size:3rem;color:var(--cyan);line-height:1;opacity:.3;}
+.blockquote p{font-family:var(--font-display);font-size:1.15rem;font-style:italic;color:var(--text-1);line-height:1.55;}
+.blockquote cite{display:block;margin-top:.5rem;font-size:.7rem;font-style:normal;letter-spacing:.04em;color:var(--text-3);}
+.credentials{display:flex;flex-direction:column;}
+.credential{display:flex;gap:var(--sp-3);align-items:flex-start;padding:var(--sp-3) 0;border-bottom:1px solid var(--border);}
+.credential:last-child{border:none;}
+.credential__num{font-family:var(--font-display);font-size:1.4rem;font-weight:400;color:var(--gray-100);line-height:1;flex-shrink:0;width:28px;margin-top:2px;}
+.credential__title{font-size:.85rem;font-weight:500;color:var(--text-1);margin-bottom:2px;}
+.credential__desc{font-size:.75rem;color:var(--text-3);line-height:1.5;}
+
+/* ===== SECCIÓN HEADER ===== */
+.section-header{text-align:center;margin-bottom:var(--sp-10);}
+.section-header p+h2{margin-top:.5rem;}
+.section-header h2+p{margin-top:.75rem;}
+
+/* ===== TRATAMIENTOS — Estilo ficha técnica ===== */
+.treatments{padding:var(--sp-16) 0;background:var(--surface);}
+.treatments__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-3);margin-top:var(--sp-8);}
+.treatment-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:var(--sp-6);position:relative;transition:border-color .3s var(--ease),box-shadow .3s var(--ease),transform .4s var(--ease);}
+.treatment-card:hover{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),0 8px 40px hsl(192 90% 60%/.1);transform:translateY(-4px);}
+/* Número como etiqueta corner */
+.treatment-card__num{position:absolute;top:var(--sp-4);right:var(--sp-4);font-size:.6rem;font-weight:700;letter-spacing:.12em;color:var(--text-4);border:1px solid var(--border);padding:3px 8px;border-radius:var(--r-pill);transition:border-color .3s,color .3s;}
+.treatment-card:hover .treatment-card__num{border-color:hsl(192 90% 60%/.3);color:var(--accent);}
+.treatment-card__title{font-family:var(--font-display);font-size:1.3rem;color:var(--text-1);margin-bottom:var(--sp-3);line-height:1.2;padding-right:3rem;}
+.treatment-card__list{display:flex;flex-direction:column;gap:6px;}
+.treatment-card__item{font-size:.775rem;color:var(--text-3);padding-left:14px;position:relative;}
+.treatment-card__item::before{content:'';position:absolute;left:0;top:9px;width:6px;height:1px;background:var(--accent);}
+.treatment-card__cta{display:inline-flex;align-items:center;gap:5px;margin-top:var(--sp-4);font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);opacity:0;transform:translateX(-6px);transition:opacity .3s var(--ease),transform .3s var(--ease);}
+.treatment-card:hover .treatment-card__cta{opacity:1;transform:translateX(0);}
+
+/* ===== MEMBRESÍAS ===== */
+.memberships{padding:var(--sp-16) 0;background:var(--gray-950);position:relative;overflow:hidden;}
+.memberships::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:300px;background:radial-gradient(ellipse,hsl(192 90% 60%/.06) 0%,transparent 70%);pointer-events:none;}
+.memberships .section-header .t-eyebrow{color:var(--cyan);}
+.memberships .section-header .t-display--lg{color:var(--white);}
+.memberships .section-header .t-body{color:hsl(0 0% 100%/.5);}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-3);align-items:start;margin-top:var(--sp-10);}
+.plan{border-radius:var(--r-xl);padding:var(--sp-6);position:relative;transition:transform .4s var(--ease),box-shadow .4s var(--ease);}
+.plan:hover{transform:translateY(-8px);}
+.plan--std{background:hsl(210 12% 10%);border:1px solid hsl(0 0% 100%/.08);}
+.plan--featured{background:var(--white);border:1px solid var(--accent);box-shadow:0 0 0 1px hsl(192 90% 60%/.3),var(--glow-cyan),0 24px 60px hsl(192 90% 60%/.15);transform:translateY(-10px);z-index:var(--z-lift);}
+.plan--featured:hover{transform:translateY(-16px);}
+.plan__badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--cyan);color:var(--gray-950);font-size:.55rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:4px 16px;border-radius:var(--r-pill);white-space:nowrap;}
+.plan__eyebrow{font-size:.58rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:hsl(0 0% 100%/.3);margin-bottom:.5rem;}
+.plan--featured .plan__eyebrow{color:var(--accent);}
+.plan__name{font-family:var(--font-display);font-size:1.6rem;color:var(--white);line-height:1.1;margin-bottom:.5rem;}
+.plan--featured .plan__name{color:var(--gray-950);}
+.plan__tagline{font-size:.77rem;color:hsl(0 0% 100%/.4);margin-bottom:var(--sp-4);line-height:1.5;font-style:italic;}
+.plan--featured .plan__tagline{color:var(--gray-400);}
+.plan__divider{height:1px;margin:var(--sp-4) 0;background:hsl(0 0% 100%/.08);}
+.plan--featured .plan__divider{background:var(--border);}
+.plan__features{display:flex;flex-direction:column;gap:var(--sp-2);margin-bottom:var(--sp-5);}
+.plan__feature{display:flex;gap:.75rem;align-items:flex-start;font-size:.82rem;color:hsl(0 0% 100%/.6);line-height:1.5;}
+.plan--featured .plan__feature{color:var(--text-2);}
+.plan__check{width:15px;height:15px;border-radius:2px;background:hsl(192 90% 60%/.15);color:var(--cyan);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+.plan--featured .plan__check{background:hsl(192 90% 60%/.12);color:var(--cyan);}
+.cita{margin-bottom:var(--sp-3);}
+.cita__label{font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan-dim);margin-bottom:5px;display:flex;align-items:center;gap:.75rem;}
+.plan--featured .cita__label{color:var(--accent-dk);}
+.cita__label::after{content:'';flex:1;height:1px;background:hsl(0 0% 100%/.06);}
+.plan--featured .cita__label::after{background:var(--border);}
+.cita__item{font-size:.73rem;color:hsl(0 0% 100%/.4);padding-left:.75rem;position:relative;margin-bottom:3px;}
+.plan--featured .cita__item{color:var(--text-3);}
+.cita__item::before{content:'';position:absolute;left:0;top:9px;width:5px;height:1px;background:var(--cyan);}
+.plan--featured .cita__item::before{background:var(--accent);}
+.plans__note{text-align:center;margin-top:var(--sp-8);font-size:.78rem;color:hsl(0 0% 100%/.3);line-height:1.7;}
+.plans__note strong{color:hsl(0 0% 100%/.5);}
+
+/* ===== CASOS ===== */
+.cases{padding:var(--sp-16) 0;background:var(--surface);}
+.cases__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-3);}
+.case-card{border-radius:var(--r-lg);overflow:hidden;background:var(--white);position:relative;aspect-ratio:2/3;border:1px solid var(--border);transition:border-color .3s var(--ease),box-shadow .3s var(--ease);}
+.case-card:hover{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),var(--glow-cyan);}
+.case-card__split{display:grid;grid-template-columns:1fr 1fr;height:100%;}
+.case-card__before{background:linear-gradient(160deg,var(--gray-100) 0%,var(--surface) 100%);position:relative;}
+.case-card__after{background:linear-gradient(160deg,hsl(192 50% 88%) 0%,hsl(192 40% 92%) 100%);position:relative;}
+.case-card__before::before,.case-card__after::before{content:'';position:absolute;width:55%;aspect-ratio:1;border-radius:50%;top:20%;left:50%;transform:translateX(-50%);}
+.case-card__before::before{background:radial-gradient(circle,var(--gray-200) 0%,transparent 70%);}
+.case-card__after::before{background:radial-gradient(circle,hsl(192 60% 75%/.4) 0%,transparent 70%);}
+.case-card__label{position:absolute;bottom:.75rem;left:50%;transform:translateX(-50%);font-size:.52rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;border-radius:var(--r-pill);}
+.case-card__before .case-card__label{background:var(--surface-2);color:var(--text-3);}
+.case-card__after .case-card__label{background:var(--cyan);color:var(--gray-950);}
+.case-card__divider{position:absolute;top:0;bottom:0;left:50%;width:1px;background:var(--border);z-index:2;}
+.case-card__info{position:absolute;bottom:0;left:0;right:0;padding:3rem var(--sp-3) var(--sp-3);background:linear-gradient(to top,hsl(210 12% 94%/.97) 0%,transparent);transform:translateY(55%);transition:transform .4s var(--ease);z-index:3;}
+.case-card:hover .case-card__info{transform:translateY(0);}
+.case-card__treatment{font-family:var(--font-display);font-size:1rem;color:var(--text-1);margin-bottom:3px;}
+.case-card__detail{font-size:.7rem;color:var(--text-3);}
+
+/* ===== CONTACTO ===== */
+.contact{padding:var(--sp-16) 0;background:var(--bg);}
+.contact__grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-12);align-items:center;}
+.contact-details{display:flex;flex-direction:column;}
+.contact-detail{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) 0;border-bottom:1px solid var(--border);}
+.contact-detail:last-child{border:none;}
+.contact-detail__icon{width:36px;height:36px;border-radius:var(--r-sm);background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0;}
+.contact-detail__label{font-size:.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);}
+.contact-detail__value{font-size:.875rem;color:var(--text-2);}
+.form-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r-xl);padding:var(--sp-8);box-shadow:var(--shadow-md);}
+.form-card__title{font-family:var(--font-display);font-size:1.5rem;color:var(--text-1);margin-bottom:4px;}
+.form-card__sub{font-size:.75rem;color:var(--text-3);margin-bottom:var(--sp-5);}
+.form-card__row{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-3);}
+.form-card__group{margin-bottom:var(--sp-3);}
+.form-card__divider{display:flex;align-items:center;gap:.75rem;margin:var(--sp-3) 0;font-size:.62rem;color:var(--text-4);letter-spacing:.1em;text-transform:uppercase;}
+.form-card__divider::before,.form-card__divider::after{content:'';flex:1;height:1px;background:var(--border);}
+.btn-wa{display:flex;align-items:center;justify-content:center;gap:.75rem;width:100%;padding:.9rem;border-radius:var(--r-md);background:hsl(142 55% 42%);color:var(--white);font-family:var(--font-body);font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;border:none;transition:background .2s,transform .3s var(--ease);}
+.btn-wa:hover{background:hsl(142 55% 36%);transform:translateY(-2px);}
+.btn-wa:focus-visible{outline:2px solid hsl(142 55% 55%);outline-offset:4px;}
+.form-feedback{margin-top:.5rem;font-size:.82rem;color:var(--accent);min-height:1.5em;font-weight:500;}
+
+/* ===== FOOTER ===== */
+.site-footer{background:var(--gray-950);border-top:1px solid hsl(192 90% 60%/.1);padding:var(--sp-12) 0 var(--sp-6);}
+.site-footer__grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:var(--sp-8);margin-bottom:var(--sp-8);padding-bottom:var(--sp-8);border-bottom:1px solid hsl(0 0% 100%/.06);}
+.site-footer__brand-desc{font-size:.78rem;color:hsl(0 0% 100%/.3);line-height:1.7;max-width:28ch;margin-top:var(--sp-3);}
+.site-footer .logo__name{color:var(--white);}
+.footer-col__title{font-size:.58rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:hsl(0 0% 100%/.2);margin-bottom:var(--sp-3);}
+.footer-col__links{display:flex;flex-direction:column;gap:.75rem;}
+.footer-col__link{font-size:.78rem;color:hsl(0 0% 100%/.3);transition:color .2s;}
+.footer-col__link:hover{color:var(--cyan);}
+.footer-col__link:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:2px;}
+.site-footer__bottom{display:flex;align-items:center;justify-content:space-between;font-size:.7rem;color:hsl(0 0% 100%/.2);}
+.footer-cert{display:inline-flex;align-items:center;gap:6px;}
+
+/* ===== ANIMACIONES ===== */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+@keyframes ticker-scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal--d1{transition-delay:.1s;}.reveal--d2{transition-delay:.2s;}.reveal--d3{transition-delay:.3s;}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:960px){
+  .hero{grid-template-columns:1fr;}.hero__right{min-height:50svh;}
+  .hero__left{padding:var(--sp-12) 0 var(--sp-8);}
+  .authority__grid{grid-template-columns:1fr;}
+  .plans{grid-template-columns:1fr;}.plan--featured{transform:none;}
+  .cases__grid{grid-template-columns:1fr 1fr;}
+  .treatments__grid{grid-template-columns:1fr;}
+  .contact__grid{grid-template-columns:1fr;}
+  .site-footer__grid{grid-template-columns:1fr 1fr;}
+  .nav__links{display:none;}
+}
+@media(max-width:560px){
+  .cases__grid{grid-template-columns:1fr;}
+  .hero__stats{flex-wrap:wrap;gap:var(--sp-4);}
+  .form-card__row{grid-template-columns:1fr;}
+  .site-footer__grid{grid-template-columns:1fr;}
+  .site-footer__bottom{flex-direction:column;gap:var(--sp-2);}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main-content">Saltar al contenido principal</a>
+
+<nav class="nav" id="nav" aria-label="Navegación principal">
+  <div class="container">
+    <div class="nav__inner">
+      <a class="logo" href="#inicio" aria-label="Dr. Alex Alba · ALAY Aesthetic Medicine — Inicio">
+        <svg class="logo__icon" aria-hidden="true" focusable="false"><use href="#b-logo"/></svg>
+        <span style="display:flex;flex-direction:column;line-height:1.1">
+          <span class="logo__name">Dr. Alex Alba</span>
+          <span class="logo__sub">ALAY · Aesthetic Medicine</span>
+        </span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a class="nav__link" href="#autoridad">El Dr. Alba</a></li>
+        <li><a class="nav__link" href="#tratamientos">Tratamientos</a></li>
+        <li><a class="nav__link" href="#resultados">Resultados</a></li>
+        <li><a class="nav__link" href="#membresias">Membresías</a></li>
+        <li><a class="nav__link" href="#contacto">Agendar</a></li>
+      </ul>
+      <a class="btn btn--cyan" href="#membresias">Beauty Memberships <svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#b-arrow"/></svg></a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="inicio">
+  <div class="hero__left container">
+    <div class="hero__meta">
+      <div class="hero__meta-line"></div>
+      <div class="hero__meta-text">
+        <span class="hero__meta-top">Roma Sur · CDMX</span>
+        <span class="hero__meta-bottom">dralexalba-alay.mx</span>
+      </div>
+    </div>
+    <h1 class="t-display t-display--xl hero__title">
+      Tu mejor<br>versión<br><em>empieza</em><br><span class="hero__accent-word">hoy.</span>
+    </h1>
+    <p class="t-body hero__sub">Medicina estética avanzada, resultados naturales. El respaldo de 7 años de Alay Group con la atención exclusiva del Dr. Alex Alba.</p>
+    <div class="hero__actions">
+      <a class="btn btn--solid btn--lg" href="#membresias">Ver Beauty Memberships <svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#b-arrow"/></svg></a>
+      <a class="btn btn--outline btn--lg" href="#resultados">Ver resultados</a>
+    </div>
+    <div class="hero__stats" aria-label="Datos del consultorio">
+      <div><strong class="stat__val">7</strong><p class="stat__lbl">Años de experiencia</p></div>
+      <div><strong class="stat__val">+500</strong><p class="stat__lbl">Pacientes con membresía</p></div>
+      <div><strong class="stat__val">UNAM</strong><p class="stat__lbl">FES Iztacala · Cirujano</p></div>
+    </div>
+  </div>
+  <div class="hero__right" aria-hidden="true">
+    <div class="hero__photo"><!-- <img src="dr-alex-alba.webp" alt="Dr. Alex Alba"> --></div>
+    <div class="hero__photo-grad"></div>
+    <div class="hero__scan"></div>
+    <div class="hero__badge" role="img" aria-label="7 años de aniversario"><span class="hero__badge-num">7</span><span class="hero__badge-txt">Años</span></div>
+    <div class="hero__card">
+      <p class="hero__card-tag">Médico Certificado · Especialista Estética</p>
+      <p class="hero__card-name">Dr. Alex Alba</p>
+      <p class="hero__card-role">ALAY Aesthetic Medicine · Roma Sur, CDMX</p>
+      <div class="hero__card-pills"><span class="pill">Stay Natural</span><span class="pill">Resultados reales</span><span class="pill">Alto nivel</span></div>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span class="ticker__item"><span class="ticker__sep">+</span> Tu Mejor Versión Empieza Hoy</span><span class="ticker__item"><span class="ticker__sep">+</span> Stay Natural</span><span class="ticker__item"><span class="ticker__sep">+</span> Medicina Estética Avanzada</span><span class="ticker__item"><span class="ticker__sep">+</span> 7 Años · Roma Sur · CDMX</span><span class="ticker__item"><span class="ticker__sep">+</span> Beauty Memberships</span><span class="ticker__item"><span class="ticker__sep">+</span> ALAY Aesthetic Medicine</span>
+      <span class="ticker__item"><span class="ticker__sep">+</span> Tu Mejor Versión Empieza Hoy</span><span class="ticker__item"><span class="ticker__sep">+</span> Stay Natural</span><span class="ticker__item"><span class="ticker__sep">+</span> Medicina Estética Avanzada</span><span class="ticker__item"><span class="ticker__sep">+</span> 7 Años · Roma Sur · CDMX</span><span class="ticker__item"><span class="ticker__sep">+</span> Beauty Memberships</span><span class="ticker__item"><span class="ticker__sep">+</span> ALAY Aesthetic Medicine</span>
+    </div>
+  </div>
+
+  <section class="authority" id="autoridad" aria-labelledby="auto-t">
+    <div class="container">
+      <div class="authority__grid">
+        <div class="reveal">
+          <p class="t-eyebrow" style="margin-bottom:.75rem">El médico detrás de los resultados</p>
+          <h2 class="t-display t-display--lg" id="auto-t" style="margin-bottom:1rem">No una clínica.<br>Tu especialista.</h2>
+          <p class="t-body" style="margin-bottom:1.5rem">El paciente moderno busca un médico de confianza que lo conozca, diseñe su protocolo y lo acompañe en el tiempo. No una clínica genérica que compite por precio.</p>
+          <blockquote class="blockquote">
+            <p>"Mi filosofía es simple: cada rostro es único, cada protocolo también debe serlo. La naturalidad no es un estilo — es el resultado de hacerlo bien."</p>
+            <cite>Dr. Alex Alba · Médico Cirujano · UNAM FES Iztacala</cite>
+          </blockquote>
+          <a class="btn btn--solid" href="#contacto">Agendar valoración gratuita <svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#b-arrow"/></svg></a>
+        </div>
+        <div class="credentials reveal reveal--d2">
+          <div class="credential"><div class="credential__num" aria-hidden="true">01</div><div><p class="credential__title">Médico Cirujano — UNAM FES Iztacala</p><p class="credential__desc">Formación de élite en la universidad más importante de México</p></div></div>
+          <div class="credential"><div class="credential__num" aria-hidden="true">02</div><div><p class="credential__title">Especialidad y certificación en medicina estética</p><p class="credential__desc">Armonización facial y protocolos de vanguardia internacional</p></div></div>
+          <div class="credential"><div class="credential__num" aria-hidden="true">03</div><div><p class="credential__title">7 años — ALAY Aesthetic Medicine Group</p><p class="credential__desc">Pilar fundacional. Historial clínico comprobado en Roma Sur</p></div></div>
+          <div class="credential"><div class="credential__num" aria-hidden="true">04</div><div><p class="credential__title">Tecnología y materiales premium</p><p class="credential__desc">Láser CRYSTAL 3D, PDRN, ADN Salmón, NCPR, hidroxiapatita</p></div></div>
+          <div class="credential"><div class="credential__num" aria-hidden="true">05</div><div><p class="credential__title">Sistema Beauty Memberships</p><p class="credential__desc">Primer protocolo anual personalizado de medicina estética en CDMX</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="treatments" id="tratamientos" aria-labelledby="treat-t">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="t-eyebrow">Portafolio clínico</p>
+        <h2 class="t-display t-display--lg" id="treat-t">Tres verticales.<br>Un estándar: la excelencia.</h2>
+      </div>
+      <div class="treatments__grid">
+        <article class="treatment-card reveal reveal--d1">
+          <span class="treatment-card__num" aria-hidden="true">01</span>
+          <h3 class="treatment-card__title">Armonización & Rejuvenecimiento Facial</h3>
+          <ul class="treatment-card__list" role="list">
+            <li class="treatment-card__item">Rinomodelación sin cirugía</li><li class="treatment-card__item">Aumento y definición de labios</li><li class="treatment-card__item">Toxina botulínica · Baby Botox</li><li class="treatment-card__item">Bichectomía · Proyección de mentón</li><li class="treatment-card__item">Blefaromodelación · Ojeras</li><li class="treatment-card__item">Skinbooster · Hidroxiapatita de calcio</li>
+          </ul>
+          <a class="treatment-card__cta" href="#contacto">Ver tratamientos <svg width="11" height="11" aria-hidden="true" focusable="false"><use href="#b-arrow"/></svg></a>
+        </article>
+        <article class="treatment-card reveal reveal--d2">
+          <span class="treatment-card__num" aria-hidden="true">02</span>
+          <h3 class="treatment-card__title">Dermatología Estética & Capilar</h3>
+          <ul class="treatment-card__list" role="list">
+            <li class="treatment-card__item">Células madre faciales y capilares</li><li class="treatment-card__item">NCPR · PDRN · ADN Salmón</li><li class="treatment-card__item">Revitalización periocular</li><li class="treatment-card__item">Hydrodermoabrasión + luz LED</li><li class="treatment-card__item">Smartpeel · Peeling médico</li><li class="treatment-card__item">Control de acné · Aminoácidos</li>
+          </ul>
+          <a class="treatment-card__cta" href="#contacto">Ver tratamientos <svg width="11" height="11" aria-hidden="true" focusable="false"><use href="#b-arrow"/></svg></a>
+        </article>
+        <article class="treatment-card reveal reveal--d3">
+          <span class="treatment-card__num" aria-hidden="true">03</span>
+          <h3 class="treatment-card__title">Remodelación Corporal de Alto Impacto</h3>
+          <ul class="treatment-card__list" role="list">
+            <li class="treatment-card__item">Lipo enzimática (papada y cuerpo)</li><li class="treatment-card__item">Hidrolipoclasia + cavitación</li><li class="treatment-card__item">Radiofrecuencia reductora</li><li class="treatment-card__item">Peptonas (aumento muscular)</li><li class="treatment-card__item">Depilación láser CRYSTAL 3D</li>
+          </ul>
+          <a class="treatment-card__cta" href="#contacto">Ver tratamientos <svg width="11" height="11" aria-hidden="true" focusable="false"><use href="#b-arrow"/></svg></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cases" id="resultados" aria-labelledby="casos-t">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="t-eyebrow">Casos clínicos documentados</p>
+        <h2 class="t-display t-display--lg" id="casos-t">Los resultados<br>hablan por sí solos.</h2>
+        <p class="t-body">Sin filtros, sin edición. Resultados reales bajo protocolo médico estandarizado.</p>
+      </div>
+      <div class="cases__grid">
+        <article class="case-card reveal reveal--d1" aria-label="Caso clínico: Rinomodelación sin cirugía. 1 sesión, duración 12 a 18 meses."><div class="case-card__split" aria-hidden="true"><div class="case-card__before"><span class="case-card__label">Antes</span></div><div class="case-card__after"><span class="case-card__label">Después</span></div></div><div class="case-card__divider" aria-hidden="true"></div><div class="case-card__info"><p class="case-card__treatment">Rinomodelación sin cirugía</p><p class="case-card__detail">Resultado inmediato · 1 sesión · 12–18 meses</p></div></article>
+        <article class="case-card reveal reveal--d2" aria-label="Caso clínico: Armonización facial completa Full Harmony, 6 citas en 12 meses."><div class="case-card__split" aria-hidden="true"><div class="case-card__before"><span class="case-card__label">Antes</span></div><div class="case-card__after"><span class="case-card__label">Después</span></div></div><div class="case-card__divider" aria-hidden="true"></div><div class="case-card__info"><p class="case-card__treatment">Armonización facial completa</p><p class="case-card__detail">Full Harmony · 6 citas · 12 meses</p></div></article>
+        <article class="case-card reveal reveal--d3" aria-label="Caso clínico: Botox Anual con Radiant Glow para piel luminosa todo el año."><div class="case-card__split" aria-hidden="true"><div class="case-card__before"><span class="case-card__label">Antes</span></div><div class="case-card__after"><span class="case-card__label">Después</span></div></div><div class="case-card__divider" aria-hidden="true"></div><div class="case-card__info"><p class="case-card__treatment">Botox Anual + Radiant Glow</p><p class="case-card__detail">Membresías combinadas · Todo el año</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="memberships" id="membresias" aria-labelledby="mem-t">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="t-eyebrow">Tus protocolos favoritos · Modalidad anual</p>
+        <h2 class="t-display t-display--lg" id="mem-t">Beauty Memberships<br><em style="color:var(--cyan)">Dr. Alex Alba</em></h2>
+        <p class="t-body">Tu belleza no es un evento. Planes anuales de cuidado continuo diseñados por el Dr. Alba para mantenerte en tu mejor versión los 12 meses del año.</p>
+      </div>
+      <div class="plans">
+        <article class="plan plan--std reveal reveal--d1" aria-labelledby="p-botox">
+          <p class="plan__eyebrow">Membresía Esencial</p>
+          <h3 class="plan__name" id="p-botox">Botox<br>Anual</h3>
+          <p class="plan__tagline">Terapia de rejuvenecimiento anual. Piel resplandeciente todo el año.</p>
+          <hr class="plan__divider">
+          <ul class="plan__features" role="list">
+            <li class="plan__feature"><span class="plan__check" aria-hidden="true"><svg width="9" height="9"><use href="#b-check"/></svg></span><span>Hasta <strong>3 aplicaciones</strong> toxina botulínica (antifaz completo, sin límite de unidades)</span></li>
+            <li class="plan__feature"><span class="plan__check" aria-hidden="true"><svg width="9" height="9"><use href="#b-check"/></svg></span><span>Retoque incluido a los 15 días</span></li>
+            <li class="plan__feature"><span class="plan__check" aria-hidden="true"><svg width="9" height="9"><use href="#b-check"/></svg></span><span>Revitalización periocular (NCPR)</span></li>
+            <li class="plan__feature"><span class="plan__check" aria-hidden="true"><svg width="9" height="9"><use href="#b-check"/></svg></span><span>2 sesiones de ADN Salmón al año</span></li>
+            <li class="plan__feature"><span class="plan__check" aria-hidden="true"><svg width="9" height="9"><use href="#b-check"/></svg></span><span>Hydrodermoabrasión + limpieza profunda previa</span></li>
+          </ul>
+          <a class="btn btn--ghost-cyan btn--full" href="#contacto">Quiero Botox Anual</a>
+        </article>
+        <article class="plan plan--featured reveal reveal--d2" aria-labelledby="p-harmony">
+          <p class="plan__badge">Protocolo más completo</p>
+          <p class="plan__eyebrow">Membresía Flagship</p>
+          <h3 class="plan__name" id="p-harmony">Full<br>Harmony</h3>
+          <p class="plan__tagline">Rejuvenecimiento facial total. 6 citas distribuidas en 1 año.</p>
+          <hr class="plan__divider">
+          <div class="cita"><p class="cita__label">Cita 1 · Mes 1</p><div class="cita__items"><p class="cita__item">Ácido hialurónico para soportes faciales</p><p class="cita__item">Baby Botox + aminoácidos cutáneos</p><p class="cita__item">Células madre + NCPR periocular</p><p class="cita__item">Hydrodermoabrasión + luz LED</p></div></div>
+          <div class="cita"><p class="cita__label">Cita 2 · Mes 2</p><div class="cita__items"><p class="cita__item">Ác. hialurónico ojeras/peribucal/mentón</p><p class="cita__item">Células madre faciales + ADN Salmón FULL FACE</p><p class="cita__item">Hydrodermoabrasión + luz LED</p></div></div>
+          <div class="cita"><p class="cita__label">Cita 3 · Mes 3</p><div class="cita__items"><p class="cita__item">NCPR + Mantenimiento Botox + aminoácidos</p><p class="cita__item">Hydrodermoabrasión + luz LED</p></div></div>
+          <div class="cita"><p class="cita__label">Cita 4 · Mes 6</p><div class="cita__items"><p class="cita__item">Ác. hialurónico (soportes/ojeras/mentón/rino/labios)</p><p class="cita__item">NCPR + PDRN · Hydrodermoabrasión + luz LED</p></div></div>
+          <div class="cita"><p class="cita__label">Cita 5 · Mes 9</p><div class="cita__items"><p class="cita__item">Baby Botox + PDRN full face</p><p class="cita__item">Hydrodermoabrasión + luz LED</p></div></div>
+          <div class="cita" style="margin-bottom:var(--sp-5)"><p class="cita__label">Cita 6 · Mes 12</p><div class="cita__items"><p class="cita__item">Revitalizadores + bioestimuladores + Dermapen</p><p class="cita__item">Mantenimiento antifaz + Hydrodermoabrasión</p></div></div>
+          <a class="btn btn--cyan btn--lg btn--full" href="#contacto">Quiero Full Harmony <svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#b-arrow"/></svg></a>
+        </article>
+        <article class="plan plan--std reveal reveal--d3" aria-labelledby="p-glow">
+          <p class="plan__eyebrow">Membresía Derma</p>
+          <h3 class="plan__name" id="p-glow">Radiant<br>Glow</h3>
+          <p class="plan__tagline">Hidratación extrema anual. 12 sesiones mensuales de revitalización cutánea.</p>
+          <hr class="plan__divider">
+          <ul class="plan__features" role="list">
+            <li class="plan__feature"><span class="plan__check" aria-hidden="true"><svg width="9" height="9"><use href="#b-check"/></svg></span><span><strong>12 sesiones</strong> de revitalización (1 por mes)</span></li>
+            <li class="plan__feature"><span class="plan__check" aria-hidden="true"><svg width="9" height="9"><use href="#b-check"/></svg></span><span>3 células madre + 3 NCPR + 3 ADN Salmón</span></li>
+            <li class="plan__feature"><span class="plan__check" aria-hidden="true"><svg width="9" height="9"><use href="#b-check"/></svg></span><span>3 sesiones de Smartpeel personalizado</span></li>
+            <li class="plan__feature"><span class="plan__check" aria-hidden="true"><svg width="9" height="9"><use href="#b-check"/></svg></span><span>1 Skinbooster a mitad del año (full rostro)</span></li>
+            <li class="plan__feature"><span class="plan__check" aria-hidden="true"><svg width="9" height="9"><use href="#b-check"/></svg></span><span>12 sesiones limpieza profunda + Hydrodermoabrasión</span></li>
+          </ul>
+          <a class="btn btn--ghost-cyan btn--full" href="#contacto">Quiero Radiant Glow</a>
+        </article>
+      </div>
+      <p class="plans__note reveal">Todos los planes incluyen <strong>consulta de diseño de protocolo personalizado</strong> con el Dr. Alex Alba.<br>Pago en una exhibición o en mensualidades sin intereses. <strong>Cupos limitados por mes.</strong></p>
+    </div>
+  </section>
+
+  <section class="contact" id="contacto" aria-labelledby="contact-t">
+    <div class="container">
+      <div class="contact__grid">
+        <div class="reveal">
+          <p class="t-eyebrow" style="margin-bottom:.75rem">Agenda tu consulta</p>
+          <h2 class="t-display t-display--lg" id="contact-t" style="margin-bottom:1rem">El primer paso<br>es conocernos.</h2>
+          <p class="t-body" style="margin-bottom:1.5rem">La consulta inicial es una valoración médica personalizada donde diseñaremos juntos tu protocolo. Sin compromisos, sin presión.</p>
+          <dl class="contact-details">
+            <div class="contact-detail"><div class="contact-detail__icon" aria-hidden="true">◈</div><div><dt class="contact-detail__label">Ubicación</dt><dd class="contact-detail__value">Tuxpan 8, Colonia Roma Sur, CDMX</dd></div></div>
+            <div class="contact-detail"><div class="contact-detail__icon" aria-hidden="true">✦</div><div><dt class="contact-detail__label">Horario</dt><dd class="contact-detail__value">Lunes a Sábado · 9:00 a 19:00 hrs</dd></div></div>
+            <div class="contact-detail"><div class="contact-detail__icon" aria-hidden="true">✶</div><div><dt class="contact-detail__label">Teléfono</dt><dd class="contact-detail__value"><a href="tel:+525578453746" style="color:inherit">55 7845 3746</a></dd></div></div>
+          </dl>
+        </div>
+        <div class="form-card reveal reveal--d2">
+          <h3 class="form-card__title">Reserva tu valoración</h3>
+          <p class="form-card__sub" id="fd">Respuesta garantizada en menos de 24 horas hábiles</p>
+          <form id="cf" action="#" method="post" novalidate aria-describedby="fd">
+            <div class="form-card__row">
+              <div class="form-card__group"><div class="field"><label class="field__label" for="n">Nombre</label><input class="field__input" type="text" id="n" name="nombre" placeholder="Tu nombre" required autocomplete="given-name"></div></div>
+              <div class="form-card__group"><div class="field"><label class="field__label" for="ap">Apellido</label><input class="field__input" type="text" id="ap" name="apellido" placeholder="Apellido" autocomplete="family-name"></div></div>
+            </div>
+            <div class="form-card__group"><div class="field"><label class="field__label" for="em">Correo electrónico</label><input class="field__input" type="email" id="em" name="email" placeholder="tu@correo.com" required autocomplete="email"></div></div>
+            <div class="form-card__group"><div class="field"><label class="field__label" for="tel">Teléfono / WhatsApp</label><input class="field__input" type="tel" id="tel" name="tel" placeholder="+52 55 0000 0000" autocomplete="tel"></div></div>
+            <div class="form-card__group"><div class="field"><label class="field__label" for="int">¿Qué te interesa?</label><select class="field__select" id="int" name="interes"><option value="">Seleccionar…</option><optgroup label="Beauty Memberships"><option value="botox-anual">Botox Anual</option><option value="radiant-glow">Radiant Glow</option><option value="full-harmony">Full Harmony</option></optgroup><optgroup label="Tratamientos Faciales"><option value="rino">Rinomodelación</option><option value="labios">Aumento de labios</option><option value="armonizacion">Armonización facial</option></optgroup><optgroup label="Dermatología & Corporal"><option value="celulas">Células madre</option><option value="corporal">Remodelación corporal</option><option value="laser">Depilación láser</option></optgroup><option value="val">Solo quiero una valoración</option></select></div></div>
+            <div class="form-card__group"><div class="field"><label class="field__label" for="msg">Mensaje (opcional)</label><textarea class="field__textarea" id="msg" name="mensaje" placeholder="Cuéntame sobre tu objetivo…"></textarea></div></div>
+            <button type="submit" class="btn btn--solid btn--lg btn--full" id="sb">Solicitar mi consulta <svg class="btn__icon" aria-hidden="true" focusable="false"><use href="#b-arrow"/></svg></button>
+            <p class="form-feedback" id="ff" role="status" aria-live="polite"></p>
+            <div class="form-card__divider">o escríbeme directo</div>
+            <a href="https://wa.me/525578453746?text=Hola%20Dr.%20Alex%20Alba" class="btn-wa" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp (abre nueva pestaña)"><svg width="17" height="17" aria-hidden="true" focusable="false"><use href="#b-wa"/></svg>WhatsApp directo con el Dr. Alba</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <a class="logo" href="#inicio" aria-label="Dr. Alex Alba — Inicio"><svg class="logo__icon" aria-hidden="true" focusable="false"><use href="#b-logo"/></svg><span style="display:flex;flex-direction:column;line-height:1.1"><span class="logo__name">Dr. Alex Alba</span><span class="logo__sub">ALAY · Aesthetic Medicine</span></span></a>
+        <p class="site-footer__brand-desc">Medicina estética avanzada con resultados naturales. Roma Sur, CDMX.</p>
+      </div>
+      <nav aria-label="Membresías"><h3 class="footer-col__title">Membresías</h3><ul class="footer-col__links" role="list"><li><a class="footer-col__link" href="#membresias">Botox Anual</a></li><li><a class="footer-col__link" href="#membresias">Radiant Glow</a></li><li><a class="footer-col__link" href="#membresias">Full Harmony</a></li><li><a class="footer-col__link" href="#contacto">Agendar</a></li></ul></nav>
+      <nav aria-label="Tratamientos"><h3 class="footer-col__title">Tratamientos</h3><ul class="footer-col__links" role="list"><li><a class="footer-col__link" href="#tratamientos">Armonización</a></li><li><a class="footer-col__link" href="#tratamientos">Rinomodelación</a></li><li><a class="footer-col__link" href="#tratamientos">Botox</a></li><li><a class="footer-col__link" href="#tratamientos">Células madre</a></li></ul></nav>
+      <nav aria-label="Clínica"><h3 class="footer-col__title">Clínica</h3><ul class="footer-col__links" role="list"><li><a class="footer-col__link" href="https://maps.google.com/?q=Tuxpan+8+Roma+Sur+CDMX" target="_blank" rel="noopener">Tuxpan 8, Roma Sur</a></li><li><a class="footer-col__link" href="tel:+525578453746">55 7845 3746</a></li><li><a class="footer-col__link" href="#">Blog médico</a></li><li><a class="footer-col__link" href="#">Privacidad</a></li></ul></nav>
+    </div>
+    <div class="site-footer__bottom"><small>© 2025 Dr. Alex Alba · ALAY Aesthetic Medicine · dralexalba-alay.mx</small><span class="footer-cert"><svg width="11" height="11" aria-hidden="true" focusable="false"><use href="#b-check"/></svg>Médico Certificado · Cédula SEP · UNAM</span></div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('nav--scrolled',scrollY>50),{passive:true});
+const ro=new IntersectionObserver((e)=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');ro.unobserve(x.target);}}),{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+const cf=document.getElementById('cf'),sb=document.getElementById('sb'),ff=document.getElementById('ff');
+cf.addEventListener('submit',e=>{e.preventDefault();sb.disabled=true;sb.textContent='Enviando…';setTimeout(()=>{ff.textContent='¡Solicitud enviada! Te contactamos pronto.';sb.textContent='Enviado ✓';sb.style.background='hsl(142 55% 42%)';},600);});
+</script>
+</body>
+</html>

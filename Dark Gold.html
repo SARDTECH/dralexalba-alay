@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Dr. Alex Alba · ALAY Aesthetic Medicine · Medicina Estética Premium en Roma Sur, CDMX. Beauty Memberships exclusivas: Botox Anual, Radiant Glow y Full Harmony. 7 años de resultados naturales.">
+<title>Dr. Alex Alba · ALAY Aesthetic Medicine | Roma Sur CDMX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   SISTEMA DE DISEÑO — Átomos HSL
+   Identidad real: Negro + Oro. "Tu Mejor Versión Empieza Hoy."
+   ============================================================ */
+:root {
+  /* Paleta de marca — HSL */
+  --noir-950:   hsl(220, 18%, 5%);
+  --noir-900:   hsl(220, 16%, 8%);
+  --noir-800:   hsl(220, 14%, 12%);
+  --noir-700:   hsl(220, 12%, 17%);
+  --noir-600:   hsl(220, 10%, 24%);
+  --noir-400:   hsl(220, 8%, 42%);
+  --noir-200:   hsl(220, 6%, 68%);
+  --noir-100:   hsl(220, 5%, 84%);
+
+  --gold-glow:  hsl(42, 100%, 72%);
+  --gold-500:   hsl(40, 85%, 58%);
+  --gold-400:   hsl(40, 80%, 50%);
+  --gold-300:   hsl(38, 70%, 42%);
+  --gold-warm:  hsl(35, 60%, 35%);
+
+  --magenta:    hsl(318, 90%, 58%);
+  --white:      hsl(0, 0%, 100%);
+  --off-white:  hsl(40, 20%, 96%);
+
+  /* Semántica */
+  --bg:           var(--noir-950);
+  --surface:      var(--noir-900);
+  --surface-2:    var(--noir-800);
+  --surface-3:    var(--noir-700);
+  --text-1:       var(--white);
+  --text-2:       var(--noir-100);
+  --text-3:       var(--noir-200);
+  --text-4:       var(--noir-400);
+  --accent:       var(--gold-500);
+  --accent-glow:  var(--gold-glow);
+  --accent-dim:   var(--gold-300);
+  --border:       hsl(220, 10%, 22%);
+  --border-gold:  hsl(40, 60%, 35%);
+
+  /* Tipo */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Outfit', system-ui, sans-serif;
+
+  /* Espaciado 8px */
+  --sp-1: 0.5rem; --sp-2: 1rem;  --sp-3: 1.5rem; --sp-4: 2rem;
+  --sp-6: 3rem;   --sp-8: 4rem;  --sp-12: 6rem;  --sp-16: 8rem;
+
+  /* Sombras (sin bordes) */
+  --glow-gold:   0 0 60px hsl(40 85% 58% / 0.2), 0 0 120px hsl(40 85% 58% / 0.1);
+  --shadow-card: 0 8px 48px hsl(220 18% 3% / 0.6);
+  --shadow-lg:   0 24px 80px hsl(220 18% 3% / 0.8);
+
+  /* Radios */
+  --r-sm: 6px; --r-md: 12px; --r-lg: 18px; --r-xl: 28px; --r-pill: 999px;
+
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ============================================================ RESET */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  background: var(--bg);
+  color: var(--text-1);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+
+/* Grain */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* ============================================================ TIPO */
+.display { font-family: var(--font-display); font-weight: 300; line-height: 1.08; letter-spacing: -0.01em; }
+.display-xl { font-size: clamp(3.2rem, 8vw, 6.5rem); }
+.display-lg { font-size: clamp(2rem, 4.5vw, 3.6rem); }
+.display-md { font-size: clamp(1.5rem, 2.5vw, 2rem); }
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.body-lg { font-size: clamp(1rem, 1.4vw, 1.1rem); line-height: 1.8; color: var(--text-2); }
+
+/* ============================================================ LOGO SVG */
+.logo-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+.logo-text-wrap { display: flex; flex-direction: column; line-height: 1.1; }
+.logo-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--white);
+  letter-spacing: 0.02em;
+}
+.logo-sub {
+  font-size: 0.58rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* ============================================================ BOTONES */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 1rem 2.2rem;
+  border-radius: var(--r-pill);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.35s var(--ease);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.btn-gold {
+  background: var(--accent);
+  color: var(--noir-950);
+  border-color: var(--accent);
+}
+.btn-gold:hover {
+  background: var(--gold-glow);
+  box-shadow: 0 8px 32px hsl(40 85% 58% / 0.4);
+  transform: translateY(-2px);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--text-2);
+  border-color: var(--border);
+}
+.btn-outline:hover {
+  border-color: var(--accent-dim);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+.btn-ghost-gold {
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--border-gold);
+}
+.btn-ghost-gold:hover {
+  background: hsl(40 85% 58% / 0.08);
+  transform: translateY(-2px);
+}
+.btn svg { width: 14px; height: 14px; transition: transform 0.3s var(--ease); }
+.btn:hover svg { transform: translateX(3px); }
+.btn-lg { padding: 1.15rem 2.6rem; font-size: 0.85rem; }
+
+/* ============================================================ LAYOUT */
+.container { max-width: 1200px; margin-inline: auto; padding-inline: clamp(1.5rem, 5vw, 4rem); }
+.container-narrow { max-width: 760px; margin-inline: auto; padding-inline: clamp(1.5rem, 5vw, 4rem); }
+
+/* ============================================================ NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 1.25rem 0;
+  transition: background 0.4s var(--ease), box-shadow 0.4s var(--ease), padding 0.3s var(--ease);
+}
+nav.scrolled {
+  background: hsl(220 18% 5% / 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 1px 0 var(--border);
+  padding: 0.9rem 0;
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+.nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
+.nav-links a { font-size: 0.75rem; font-weight: 400; letter-spacing: 0.06em; color: var(--text-3); transition: color 0.2s; text-transform: uppercase; }
+.nav-links a:hover { color: var(--accent); }
+
+/* ============================================================ HERO */
+.hero {
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 80px;
+  position: relative;
+  overflow: hidden;
+}
+/* Glow ambiental */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: 0;
+  width: 60%;
+  height: 120%;
+  background: radial-gradient(ellipse at 70% 40%, hsl(40 85% 58% / 0.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--sp-16) var(--sp-8) var(--sp-16) 0;
+  animation: fadeUp 1s var(--ease) both;
+}
+.hero-left .eyebrow { margin-bottom: var(--sp-4); display: flex; align-items: center; gap: var(--sp-2); }
+.hero-left .eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--accent); }
+
+.hero-title { color: var(--white); margin-bottom: var(--sp-4); }
+.hero-title em { font-style: italic; color: var(--accent); }
+.hero-title .line-break { display: block; }
+
+.hero-subtitle { max-width: 48ch; margin-bottom: var(--sp-6); }
+.hero-actions { display: flex; align-items: center; gap: var(--sp-3); flex-wrap: wrap; }
+
+.hero-stats {
+  display: flex;
+  gap: var(--sp-6);
+  margin-top: var(--sp-8);
+  padding-top: var(--sp-6);
+  border-top: 1px solid var(--border);
+}
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: var(--accent);
+  line-height: 1;
+}
+.stat-lbl { font-size: 0.7rem; color: var(--text-4); letter-spacing: 0.04em; margin-top: 4px; }
+
+/* Panel derecho hero */
+.hero-right {
+  position: relative;
+  overflow: hidden;
+  background: var(--noir-900);
+}
+.hero-img-wrap {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--noir-800) 0%, var(--noir-900) 60%, hsl(38 40% 12%) 100%);
+}
+.hero-img-wrap img { width: 100%; height: 100%; object-fit: cover; opacity: 0.45; mix-blend-mode: luminosity; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, var(--noir-950) 0%, transparent 18%); }
+
+/* Floating card sobre la imagen */
+.hero-card {
+  position: absolute;
+  bottom: var(--sp-8);
+  left: var(--sp-6);
+  right: var(--sp-6);
+  background: hsl(220 18% 8% / 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--r-lg);
+  padding: var(--sp-4);
+  animation: fadeUp 1s var(--ease) 0.4s both;
+}
+.hero-card-tag {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.hero-card-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.hero-card-sub { font-size: 0.75rem; color: var(--text-4); }
+.hero-card-pills { display: flex; gap: 6px; flex-wrap: wrap; margin-top: var(--sp-2); }
+.pill {
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--r-pill);
+  background: hsl(40 85% 58% / 0.1);
+  color: var(--accent);
+  border: 1px solid hsl(40 85% 58% / 0.2);
+}
+
+/* Aniversario badge */
+.hero-badge {
+  position: absolute;
+  top: var(--sp-6);
+  right: var(--sp-6);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle, hsl(40 85% 25%) 0%, hsl(40 85% 15%) 100%);
+  border: 1px solid var(--border-gold);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: var(--glow-gold);
+}
+.hero-badge-num {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1;
+}
+.hero-badge-txt { font-size: 0.5rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-300); margin-top: 2px; }
+
+/* ============================================================ TAGLINE STRIP */
+.tagline-strip {
+  padding: var(--sp-6) 0;
+  background: var(--noir-900);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+.tagline-track {
+  display: flex;
+  gap: var(--sp-8);
+  animation: ticker 28s linear infinite;
+  width: max-content;
+}
+.tagline-item {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  white-space: nowrap;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-4);
+}
+.tagline-item span { color: var(--accent); font-size: 0.9rem; }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ============================================================ AUTORIDAD */
+.authority { padding: var(--sp-16) 0; background: var(--bg); }
+.authority-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: var(--sp-12); align-items: center; }
+
+.authority-content .eyebrow { margin-bottom: var(--sp-3); }
+.authority-content .display-lg { margin-bottom: var(--sp-4); color: var(--white); }
+.authority-content .body-lg { margin-bottom: var(--sp-6); }
+
+.quote {
+  border-left: 2px solid var(--accent);
+  padding-left: var(--sp-4);
+  margin: var(--sp-6) 0;
+}
+.quote p {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--text-1);
+  line-height: 1.5;
+}
+.quote cite { font-size: 0.72rem; color: var(--text-4); display: block; margin-top: 8px; font-style: normal; letter-spacing: 0.04em; }
+
+.credentials { display: flex; flex-direction: column; gap: 0; }
+.cred-item {
+  display: flex;
+  gap: var(--sp-3);
+  align-items: flex-start;
+  padding: var(--sp-3) 0;
+  border-bottom: 1px solid var(--border);
+}
+.cred-item:last-child { border: none; }
+.cred-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  margin-top: 7px;
+  box-shadow: 0 0 8px hsl(40 85% 58% / 0.5);
+}
+.cred-title { font-size: 0.875rem; font-weight: 500; color: var(--text-1); margin-bottom: 2px; }
+.cred-desc { font-size: 0.775rem; color: var(--text-4); line-height: 1.5; }
+
+/* ============================================================ SECCIÓN HEADER */
+.section-header { text-align: center; margin-bottom: var(--sp-10); }
+.section-header .eyebrow { margin-bottom: var(--sp-2); }
+.section-header .display-lg { margin-bottom: var(--sp-3); color: var(--white); }
+.section-header .body-lg { max-width: 54ch; margin-inline: auto; }
+
+/* ============================================================ TRATAMIENTOS */
+.treatments { padding: var(--sp-16) 0; background: var(--noir-900); }
+.treat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border-radius: var(--r-lg); overflow: hidden; }
+.treat-card {
+  background: var(--noir-900);
+  padding: var(--sp-6);
+  cursor: pointer;
+  transition: background 0.3s var(--ease);
+  position: relative;
+}
+.treat-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: var(--sp-6);
+  right: var(--sp-6);
+  height: 1px;
+  background: transparent;
+  transition: background 0.3s;
+}
+.treat-card:hover { background: var(--noir-800); }
+.treat-card:hover::after { background: var(--accent); }
+
+.treat-num {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: var(--border);
+  line-height: 1;
+  margin-bottom: var(--sp-3);
+  transition: color 0.3s;
+}
+.treat-card:hover .treat-num { color: hsl(40 85% 58% / 0.2); }
+.treat-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--text-1);
+  margin-bottom: var(--sp-2);
+  line-height: 1.2;
+}
+.treat-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.treat-list li {
+  font-size: 0.775rem;
+  color: var(--text-4);
+  padding-left: 14px;
+  position: relative;
+}
+.treat-list li::before { content: '—'; position: absolute; left: 0; color: var(--accent-dim); font-size: 0.65rem; }
+.treat-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: var(--sp-4);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.3s, transform 0.3s var(--ease);
+}
+.treat-card:hover .treat-arrow { opacity: 1; transform: translateX(0); }
+
+/* ============================================================ MEMBRESÍAS — NÚCLEO */
+.memberships {
+  padding: var(--sp-16) 0;
+  background: var(--bg);
+  position: relative;
+}
+/* Glow de fondo */
+.memberships::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 400px;
+  background: radial-gradient(ellipse, hsl(40 85% 58% / 0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.plans-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-3);
+  align-items: start;
+  margin-top: var(--sp-10);
+}
+
+/* Tarjeta base plan */
+.plan {
+  border-radius: var(--r-lg);
+  padding: var(--sp-6);
+  position: relative;
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+.plan:hover { transform: translateY(-8px); }
+
+.plan-std {
+  background: var(--noir-900);
+  border: 1px solid var(--border);
+}
+.plan-featured {
+  background: var(--noir-800);
+  border: 1px solid var(--border-gold);
+  box-shadow: 0 0 0 1px hsl(40 85% 58% / 0.1), var(--glow-gold), var(--shadow-card);
+  transform: translateY(-8px);
+  z-index: 2;
+}
+.plan-featured:hover { transform: translateY(-16px); }
+
+.plan-badge {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: var(--noir-950);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 4px 16px;
+  border-radius: var(--r-pill);
+  white-space: nowrap;
+}
+
+.plan-eyebrow {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-4);
+  margin-bottom: var(--sp-2);
+}
+.plan-featured .plan-eyebrow { color: var(--accent); }
+
+.plan-name {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: var(--sp-1);
+}
+.plan-tagline { font-size: 0.78rem; color: var(--text-4); margin-bottom: var(--sp-4); line-height: 1.5; font-style: italic; }
+.plan-featured .plan-tagline { color: var(--gold-300); }
+
+.plan-divider { height: 1px; background: var(--border); margin: var(--sp-4) 0; }
+.plan-featured .plan-divider { background: var(--border-gold); }
+
+.plan-features { list-style: none; display: flex; flex-direction: column; gap: var(--sp-2); margin-bottom: var(--sp-6); }
+.plan-feature { display: flex; gap: var(--sp-2); align-items: flex-start; font-size: 0.82rem; color: var(--text-3); line-height: 1.5; }
+.plan-check {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(40 85% 58% / 0.1);
+  color: var(--accent);
+  font-size: 0.55rem;
+  font-weight: 700;
+}
+.plan-featured .plan-feature { color: var(--text-2); }
+.plan-sub-section { margin-top: var(--sp-3); margin-bottom: var(--sp-1); }
+.plan-sub-title { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: var(--sp-2); }
+
+/* Citas del Full Harmony */
+.cita-block { margin-bottom: var(--sp-3); }
+.cita-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-dim);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cita-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.cita-items { display: flex; flex-direction: column; gap: 4px; }
+.cita-item { font-size: 0.75rem; color: var(--text-4); padding-left: 12px; position: relative; }
+.cita-item::before { content: '·'; position: absolute; left: 0; color: var(--accent); }
+
+.plan-cta { width: 100%; justify-content: center; }
+
+.plans-note {
+  text-align: center;
+  margin-top: var(--sp-8);
+  font-size: 0.78rem;
+  color: var(--text-4);
+  line-height: 1.7;
+}
+.plans-note strong { color: var(--text-3); }
+
+/* ============================================================ CASOS (ANTES/DESPUÉS) */
+.cases { padding: var(--sp-16) 0; background: var(--noir-900); }
+.cases-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-3); }
+.case-card {
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: var(--noir-800);
+  position: relative;
+  aspect-ratio: 2/3;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  transition: border-color 0.3s, box-shadow 0.4s var(--ease);
+}
+.case-card:hover { border-color: var(--border-gold); box-shadow: var(--glow-gold); }
+.case-split { display: grid; grid-template-columns: 1fr 1fr; height: 100%; }
+.case-before { background: linear-gradient(160deg, var(--noir-700) 0%, var(--noir-800) 100%); position: relative; }
+.case-after  { background: linear-gradient(160deg, hsl(38 30% 20%) 0%, hsl(38 25% 14%) 100%); position: relative; }
+.case-before::before, .case-after::before {
+  content: '';
+  position: absolute;
+  width: 55%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.case-before::before { background: radial-gradient(circle, var(--noir-600) 0%, transparent 70%); }
+.case-after::before  { background: radial-gradient(circle, hsl(38 40% 35% / 0.5) 0%, transparent 70%); }
+.case-lbl {
+  position: absolute;
+  bottom: var(--sp-2);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: var(--r-pill);
+}
+.case-before .case-lbl { background: hsl(220 10% 100% / 0.08); color: var(--text-4); }
+.case-after .case-lbl  { background: var(--accent); color: var(--noir-950); }
+.case-line {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 50%;
+  width: 1.5px;
+  background: hsl(0 0% 100% / 0.15);
+  z-index: 2;
+}
+.case-info {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 3rem var(--sp-3) var(--sp-3);
+  background: linear-gradient(to top, hsl(220 18% 5% / 0.95) 0%, transparent 100%);
+  transform: translateY(55%);
+  transition: transform 0.4s var(--ease);
+  z-index: 3;
+}
+.case-card:hover .case-info { transform: translateY(0); }
+.case-treatment {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.case-detail { font-size: 0.72rem; color: var(--text-4); }
+
+/* ============================================================ CONTACTO */
+.contact { padding: var(--sp-16) 0; background: var(--bg); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-12); align-items: center; }
+
+.contact-info .eyebrow { margin-bottom: var(--sp-3); }
+.contact-info .display-lg { margin-bottom: var(--sp-4); color: var(--white); }
+.contact-info .body-lg { margin-bottom: var(--sp-6); }
+
+.contact-details { display: flex; flex-direction: column; gap: var(--sp-3); }
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-3) 0;
+  border-bottom: 1px solid var(--border);
+}
+.contact-row:last-child { border: none; }
+.contact-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--r-sm);
+  background: hsl(40 85% 58% / 0.08);
+  border: 1px solid var(--border-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+.contact-label { font-size: 0.72rem; color: var(--text-4); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; }
+.contact-value { font-size: 0.875rem; color: var(--text-2); margin-top: 1px; }
+
+/* Formulario */
+.form-card {
+  background: var(--noir-900);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: var(--sp-8);
+  box-shadow: var(--shadow-card);
+}
+.form-title { font-family: var(--font-display); font-size: 1.6rem; font-weight: 300; color: var(--white); margin-bottom: 4px; }
+.form-sub { font-size: 0.78rem; color: var(--text-4); margin-bottom: var(--sp-6); }
+
+.form-group { margin-bottom: var(--sp-3); }
+.form-label { display: block; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-4); margin-bottom: 6px; }
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 0.875rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--text-1);
+  background: var(--noir-800);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  appearance: none;
+}
+.form-input::placeholder, .form-textarea::placeholder { color: var(--text-4); }
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--accent-dim);
+  box-shadow: 0 0 0 3px hsl(40 85% 58% / 0.08);
+}
+.form-select option { background: var(--noir-800); }
+.form-textarea { resize: vertical; min-height: 90px; line-height: 1.6; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-3); }
+.form-submit { width: 100%; justify-content: center; margin-top: var(--sp-2); }
+
+.divider-or {
+  display: flex; align-items: center; gap: var(--sp-2);
+  margin: var(--sp-3) 0;
+  font-size: 0.7rem; color: var(--text-4); letter-spacing: 0.08em; text-transform: uppercase;
+}
+.divider-or::before, .divider-or::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+.wa-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  width: 100%;
+  padding: 1rem;
+  border-radius: var(--r-md);
+  background: hsl(142 62% 40%);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s, transform 0.3s var(--ease);
+}
+.wa-btn:hover { background: hsl(142 62% 34%); transform: translateY(-2px); }
+
+/* ============================================================ FOOTER */
+footer {
+  background: var(--noir-900);
+  border-top: 1px solid var(--border);
+  padding: var(--sp-12) 0 var(--sp-6);
+}
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--sp-8); margin-bottom: var(--sp-8); padding-bottom: var(--sp-8); border-bottom: 1px solid var(--border); }
+.footer-brand-desc { font-size: 0.8rem; color: var(--text-4); line-height: 1.7; max-width: 28ch; margin-top: var(--sp-3); }
+.footer-col-title { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-4); margin-bottom: var(--sp-3); }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: var(--sp-2); }
+.footer-links a { font-size: 0.8rem; color: var(--text-4); transition: color 0.2s; }
+.footer-links a:hover { color: var(--accent); }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; font-size: 0.72rem; color: var(--text-4); }
+.footer-cert { display: inline-flex; align-items: center; gap: 6px; }
+
+/* ============================================================ ANIMACIONES */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-d1 { transition-delay: 0.1s; }
+.reveal-d2 { transition-delay: 0.2s; }
+.reveal-d3 { transition-delay: 0.3s; }
+.reveal-d4 { transition-delay: 0.4s; }
+
+/* ============================================================ RESPONSIVE */
+@media (max-width: 960px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { min-height: 50svh; }
+  .authority-grid { grid-template-columns: 1fr; }
+  .plans-wrap { grid-template-columns: 1fr; }
+  .plan-featured { transform: none; }
+  .cases-grid { grid-template-columns: 1fr 1fr; }
+  .treat-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .nav-links { display: none; }
+}
+@media (max-width: 560px) {
+  .cases-grid { grid-template-columns: 1fr; }
+  .hero-stats { flex-wrap: wrap; gap: var(--sp-4); }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; gap: var(--sp-2); }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav" role="navigation" aria-label="Navegación principal">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#" aria-label="Dr. Alex Alba · ALAY Aesthetic Medicine">
+        <div class="logo-mark">
+          <!-- Logo molecular SVG replicando su identidad -->
+          <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="16" cy="16" r="3" fill="hsl(40,85%,58%)"/>
+            <circle cx="16" cy="5"  r="2" fill="hsl(40,85%,58%)" opacity=".7"/>
+            <circle cx="16" cy="27" r="2" fill="hsl(40,85%,58%)" opacity=".7"/>
+            <circle cx="5"  cy="16" r="2" fill="hsl(40,85%,58%)" opacity=".7"/>
+            <circle cx="27" cy="16" r="2" fill="hsl(40,85%,58%)" opacity=".7"/>
+            <circle cx="7.5"  cy="7.5"  r="1.5" fill="hsl(40,85%,58%)" opacity=".5"/>
+            <circle cx="24.5" cy="7.5"  r="1.5" fill="hsl(40,85%,58%)" opacity=".5"/>
+            <circle cx="7.5"  cy="24.5" r="1.5" fill="hsl(40,85%,58%)" opacity=".5"/>
+            <circle cx="24.5" cy="24.5" r="1.5" fill="hsl(40,85%,58%)" opacity=".5"/>
+            <line x1="16" y1="7"  x2="16" y2="13" stroke="hsl(40,85%,58%)" stroke-width=".8" opacity=".5"/>
+            <line x1="16" y1="19" x2="16" y2="25" stroke="hsl(40,85%,58%)" stroke-width=".8" opacity=".5"/>
+            <line x1="7"  y1="16" x2="13" y2="16" stroke="hsl(40,85%,58%)" stroke-width=".8" opacity=".5"/>
+            <line x1="19" y1="16" x2="25" y2="16" stroke="hsl(40,85%,58%)" stroke-width=".8" opacity=".5"/>
+            <line x1="9"  y1="9"  x2="14" y2="14" stroke="hsl(40,85%,58%)" stroke-width=".6" opacity=".35"/>
+            <line x1="18" y1="18" x2="23" y2="23" stroke="hsl(40,85%,58%)" stroke-width=".6" opacity=".35"/>
+            <line x1="23" y1="9"  x2="18" y2="14" stroke="hsl(40,85%,58%)" stroke-width=".6" opacity=".35"/>
+            <line x1="9"  y1="23" x2="14" y2="18" stroke="hsl(40,85%,58%)" stroke-width=".6" opacity=".35"/>
+          </svg>
+          <div class="logo-text-wrap">
+            <span class="logo-name">Dr. Alex Alba</span>
+            <span class="logo-sub">ALAY · Aesthetic Medicine</span>
+          </div>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#autoridad">El Dr. Alba</a></li>
+        <li><a href="#tratamientos">Tratamientos</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#membresias">Membresías</a></li>
+        <li><a href="#contacto">Agendar</a></li>
+      </ul>
+      <a href="#membresias" class="btn btn-gold">
+        Beauty Memberships
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="inicio" role="banner">
+  <div class="hero-left container" style="padding-left: clamp(1.5rem,5vw,4rem)">
+    <div class="eyebrow">
+      Roma Sur · Ciudad de México · dralexalba-alay.mx
+    </div>
+    <h1 class="display display-xl hero-title">
+      <span class="line-break">Tu mejor versión</span>
+      <em>empieza hoy.</em>
+    </h1>
+    <p class="body-lg hero-subtitle">
+      Medicina estética avanzada, resultados naturales. El respaldo de 7 años de Alay Group con la atención exclusiva y personalizada del Dr. Alex Alba.
+    </p>
+    <div class="hero-actions">
+      <a href="#membresias" class="btn btn-gold btn-lg">
+        Ver Beauty Memberships
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#resultados" class="btn btn-outline btn-lg">Ver resultados</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">7</div>
+        <div class="stat-lbl">Años de experiencia clínica</div>
+      </div>
+      <div>
+        <div class="stat-num">+500</div>
+        <div class="stat-lbl">Pacientes con membresía activa</div>
+      </div>
+      <div>
+        <div class="stat-num">UNAM</div>
+        <div class="stat-lbl">FES Iztacala · Médico Cirujano</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right" aria-hidden="true">
+    <div class="hero-img-wrap">
+      <!-- Reemplazar con: <img src="dr-alex-alba-hero.jpg" alt="Dr. Alex Alba - Medicina Estética Premium CDMX"> -->
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-badge">
+      <div class="hero-badge-num">7</div>
+      <div class="hero-badge-txt">Años · Aniversario</div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-tag">Médico Certificado · Especialista en Medicina Estética</div>
+      <div class="hero-card-title">Dr. Alex Alba</div>
+      <div class="hero-card-sub">ALAY | Aesthetic Medicine · Roma Sur, CDMX</div>
+      <div class="hero-card-pills">
+        <span class="pill">Stay Natural</span>
+        <span class="pill">Resultados reales</span>
+        <span class="pill">Alto nivel</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- TICKER -->
+<div class="tagline-strip" aria-hidden="true">
+  <div class="tagline-track">
+    <div class="tagline-item"><span>✦</span> Tu Mejor Versión Empieza Hoy</div>
+    <div class="tagline-item"><span>✦</span> Stay Natural · Resultados Naturales</div>
+    <div class="tagline-item"><span>✦</span> Medicina Estética Avanzada</div>
+    <div class="tagline-item"><span>✦</span> 7 Años · Roma Sur · CDMX</div>
+    <div class="tagline-item"><span>✦</span> Beauty Memberships · Protocolo Anual</div>
+    <div class="tagline-item"><span>✦</span> ALAY Aesthetic Medicine</div>
+    <!-- duplicar para loop sin corte -->
+    <div class="tagline-item"><span>✦</span> Tu Mejor Versión Empieza Hoy</div>
+    <div class="tagline-item"><span>✦</span> Stay Natural · Resultados Naturales</div>
+    <div class="tagline-item"><span>✦</span> Medicina Estética Avanzada</div>
+    <div class="tagline-item"><span>✦</span> 7 Años · Roma Sur · CDMX</div>
+    <div class="tagline-item"><span>✦</span> Beauty Memberships · Protocolo Anual</div>
+    <div class="tagline-item"><span>✦</span> ALAY Aesthetic Medicine</div>
+  </div>
+</div>
+
+<!-- AUTORIDAD -->
+<section class="authority" id="autoridad" aria-labelledby="auto-titulo">
+  <div class="container">
+    <div class="authority-grid">
+      <div class="authority-content reveal">
+        <div class="eyebrow">El médico detrás de los resultados</div>
+        <h2 class="display display-lg" id="auto-titulo">No una clínica.<br>Tu especialista.</h2>
+        <p class="body-lg">El paciente moderno busca a un médico de confianza que lo conozca, diseñe su protocolo y lo acompañe en el tiempo. No una clínica genérica que compite por precio.</p>
+        <div class="quote">
+          <p>"Mi filosofía es simple: cada rostro es único, cada protocolo también debe serlo. La naturalidad no es un estilo — es el resultado de hacerlo bien."</p>
+          <cite>— Dr. Alex Alba · Médico Cirujano · UNAM FES Iztacala</cite>
+        </div>
+        <a href="#contacto" class="btn btn-gold">
+          Agendar valoración gratuita
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="credentials reveal reveal-d2">
+        <div class="cred-item">
+          <div class="cred-dot"></div>
+          <div>
+            <div class="cred-title">Médico Cirujano — UNAM FES Iztacala</div>
+            <div class="cred-desc">Formación de élite en la universidad más importante de México</div>
+          </div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-dot"></div>
+          <div>
+            <div class="cred-title">Especialidad y certificación en medicina estética</div>
+            <div class="cred-desc">Armonización facial y protocolos de vanguardia internacional</div>
+          </div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-dot"></div>
+          <div>
+            <div class="cred-title">7 años — ALAY Aesthetic Medicine Group</div>
+            <div class="cred-desc">Pilar fundacional del grupo. Historial clínico comprobado en Roma Sur</div>
+          </div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-dot"></div>
+          <div>
+            <div class="cred-title">Tecnología y materiales premium</div>
+            <div class="cred-desc">Láser CRYSTAL 3D, PDRN, ADN Salmón, NCPR, hidroxiapatita de calcio</div>
+          </div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-dot"></div>
+          <div>
+            <div class="cred-title">Sistema Beauty Memberships</div>
+            <div class="cred-desc">Primer sistema de ingresos recurrentes de medicina estética personalizada en CDMX</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRATAMIENTOS -->
+<section class="treatments" id="tratamientos" aria-labelledby="treat-titulo">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow">Portafolio clínico</div>
+      <h2 class="display display-lg" id="treat-titulo">Tres verticales.<br>Un estándar: la excelencia.</h2>
+    </div>
+    <div class="treat-grid reveal">
+      <article class="treat-card">
+        <div class="treat-num">01</div>
+        <h3 class="treat-title">Armonización & Rejuvenecimiento Facial</h3>
+        <ul class="treat-list">
+          <li>Rinomodelación sin cirugía</li>
+          <li>Aumento y definición de labios</li>
+          <li>Toxina botulínica · Baby Botox</li>
+          <li>Bichectomía</li>
+          <li>Proyección de mentón</li>
+          <li>Marcaje mandibular</li>
+          <li>Blefaromodelación</li>
+          <li>Bioestimulación (hidroxiapatita de calcio)</li>
+          <li>Skinbooster · Ojeras</li>
+        </ul>
+        <span class="treat-arrow">
+          Ver tratamientos
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </span>
+      </article>
+      <article class="treat-card">
+        <div class="treat-num">02</div>
+        <h3 class="treat-title">Dermatología Estética & Capilar</h3>
+        <ul class="treat-list">
+          <li>Células madre faciales</li>
+          <li>Células madre capilares</li>
+          <li>NCPR · PDRN · ADN Salmón</li>
+          <li>Revitalización periocular</li>
+          <li>Hydrodermoabrasión + luz LED</li>
+          <li>Smartpeel · Peeling médico</li>
+          <li>Control y tratamiento de acné</li>
+          <li>Tratamiento para celulitis</li>
+          <li>Aminoácidos cutáneos</li>
+        </ul>
+        <span class="treat-arrow">
+          Ver tratamientos
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </span>
+      </article>
+      <article class="treat-card">
+        <div class="treat-num">03</div>
+        <h3 class="treat-title">Remodelación Corporal de Alto Impacto</h3>
+        <ul class="treat-list">
+          <li>Lipo enzimática (papada y cuerpo)</li>
+          <li>Enzimas recombinantes faciales/corporales</li>
+          <li>Hidrolipoclasia enzimática + cavitación</li>
+          <li>Radiofrecuencia reductora</li>
+          <li>Peptonas (aumento muscular)</li>
+          <li>Depilación láser CRYSTAL 3D</li>
+          <li>Eliminación de verrugas</li>
+        </ul>
+        <span class="treat-arrow">
+          Ver tratamientos
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CASOS DE ÉXITO -->
+<section class="cases" id="resultados" aria-labelledby="cases-titulo">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow">Casos clínicos documentados</div>
+      <h2 class="display display-lg" id="cases-titulo">Los resultados<br>hablan por sí solos.</h2>
+      <p class="body-lg">Fotografías estandarizadas bajo protocolo médico. Sin filtros, sin edición. Resultados reales de pacientes reales.</p>
+    </div>
+    <div class="cases-grid">
+      <article class="case-card reveal reveal-d1" aria-label="Antes y después: Rinomodelación">
+        <div class="case-split">
+          <div class="case-before"><span class="case-lbl">Antes</span></div>
+          <div class="case-after"><span class="case-lbl">Después</span></div>
+        </div>
+        <div class="case-line" aria-hidden="true"></div>
+        <div class="case-info">
+          <p class="case-treatment">Rinomodelación sin cirugía</p>
+          <p class="case-detail">Resultado inmediato · 1 sesión · Duración 12–18 meses</p>
+        </div>
+      </article>
+      <article class="case-card reveal reveal-d2" aria-label="Antes y después: Full Harmony">
+        <div class="case-split">
+          <div class="case-before"><span class="case-lbl">Antes</span></div>
+          <div class="case-after"><span class="case-lbl">Después</span></div>
+        </div>
+        <div class="case-line" aria-hidden="true"></div>
+        <div class="case-info">
+          <p class="case-treatment">Armonización facial completa</p>
+          <p class="case-detail">Protocolo Full Harmony · 6 citas · 12 meses</p>
+        </div>
+      </article>
+      <article class="case-card reveal reveal-d3" aria-label="Antes y después: Botox + Radiant Glow">
+        <div class="case-split">
+          <div class="case-before"><span class="case-lbl">Antes</span></div>
+          <div class="case-after"><span class="case-lbl">Después</span></div>
+        </div>
+        <div class="case-line" aria-hidden="true"></div>
+        <div class="case-info">
+          <p class="case-treatment">Botox Anual + Radiant Glow</p>
+          <p class="case-detail">Membresías combinadas · Piel luminosa todo el año</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- BEAUTY MEMBERSHIPS — NÚCLEO DEL NEGOCIO -->
+<section class="memberships" id="membresias" aria-labelledby="mem-titulo">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="eyebrow">Tus protocolos favoritos · Modalidad anual</div>
+      <h2 class="display display-lg" id="mem-titulo">Beauty Memberships<br><em style="color:var(--accent)">Dr. Alex Alba</em></h2>
+      <p class="body-lg">Tu belleza no es un evento. Es un estilo de vida. Planes anuales de cuidado continuo diseñados por el Dr. Alba para mantenerte en tu mejor versión los 12 meses del año.</p>
+    </div>
+
+    <div class="plans-wrap">
+
+      <!-- BOTOX ANUAL -->
+      <article class="plan plan-std reveal reveal-d1" aria-labelledby="plan-botox">
+        <div class="plan-eyebrow">Membresía Esencial</div>
+        <h3 class="plan-name" id="plan-botox">Botox<br>Anual</h3>
+        <p class="plan-tagline">Terapia de rejuvenecimiento anual. Piel resplandeciente todo el año.</p>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li class="plan-feature">
+            <div class="plan-check">✓</div>
+            <span>Hasta <strong>3 aplicaciones</strong> de toxina botulínica (zona antifaz: frente, entrecejo, patas de gallo, bunny lines, levantamiento de cejas)</span>
+          </li>
+          <li class="plan-feature">
+            <div class="plan-check">✓</div>
+            <span>Sin límite de unidades en cada aplicación</span>
+          </li>
+          <li class="plan-feature">
+            <div class="plan-check">✓</div>
+            <span>Retoque incluido a los 15 días de cada aplicación</span>
+          </li>
+          <li class="plan-feature">
+            <div class="plan-check">✓</div>
+            <span>Revitalización periocular (NCPR) en cada sesión</span>
+          </li>
+          <li class="plan-feature">
+            <div class="plan-check">✓</div>
+            <span>2 sesiones de ADN Salmón (esperma) al año</span>
+          </li>
+          <li class="plan-feature">
+            <div class="plan-check">✓</div>
+            <span>Hydrodermoabrasión + limpieza profunda previa a cada procedimiento</span>
+          </li>
+        </ul>
+        <a href="#contacto" class="btn btn-ghost-gold plan-cta">
+          Quiero Botox Anual
+        </a>
+      </article>
+
+      <!-- FULL HARMONY — DESTACADO -->
+      <article class="plan plan-featured reveal reveal-d2" aria-labelledby="plan-harmony">
+        <div class="plan-badge">Protocolo más completo</div>
+        <div class="plan-eyebrow">Membresía Flagship</div>
+        <h3 class="plan-name" id="plan-harmony">Full<br>Harmony</h3>
+        <p class="plan-tagline">Rejuvenecimiento facial total. 6 citas distribuidas en 1 año, enfocadas en estética y calidad de piel.</p>
+        <div class="plan-divider"></div>
+
+        <!-- Citas del protocolo -->
+        <div class="cita-block">
+          <div class="cita-label">Cita 1 · Mes 1</div>
+          <div class="cita-items">
+            <div class="cita-item">Ácido hialurónico para soportes faciales</div>
+            <div class="cita-item">Baby Botox + aminoácidos cutáneos</div>
+            <div class="cita-item">Células madre faciales + NCPR periocular</div>
+            <div class="cita-item">Hydrodermoabrasión + luz LED facial</div>
+          </div>
+        </div>
+        <div class="cita-block">
+          <div class="cita-label">Cita 2 · Mes 2</div>
+          <div class="cita-items">
+            <div class="cita-item">Ác. hialurónico en ojeras, peribucal o mentón</div>
+            <div class="cita-item">Células madre faciales</div>
+            <div class="cita-item">ADN Salmón FULL FACE</div>
+            <div class="cita-item">Hydrodermoabrasión + luz LED facial</div>
+          </div>
+        </div>
+        <div class="cita-block">
+          <div class="cita-label">Cita 3 · Mes 3</div>
+          <div class="cita-items">
+            <div class="cita-item">NCPR periocular o peribucal</div>
+            <div class="cita-item">Mantenimiento Botox + aminoácidos</div>
+            <div class="cita-item">Hydrodermoabrasión + luz LED facial</div>
+          </div>
+        </div>
+        <div class="cita-block">
+          <div class="cita-label">Cita 4 · Mes 6</div>
+          <div class="cita-items">
+            <div class="cita-item">Ác. hialurónico (soportes, ojeras, mentón, rino o labios)</div>
+            <div class="cita-item">NCPR + PDRN</div>
+            <div class="cita-item">Hydrodermoabrasión + luz LED facial</div>
+          </div>
+        </div>
+        <div class="cita-block">
+          <div class="cita-label">Cita 5 · Mes 9</div>
+          <div class="cita-items">
+            <div class="cita-item">Baby Botox</div>
+            <div class="cita-item">PDRN full face</div>
+            <div class="cita-item">Hydrodermoabrasión + luz LED facial</div>
+          </div>
+        </div>
+        <div class="cita-block" style="margin-bottom:var(--sp-6)">
+          <div class="cita-label">Cita 6 · Mes 12</div>
+          <div class="cita-items">
+            <div class="cita-item">Revitalizadores y bioestimuladores + Dermapen</div>
+            <div class="cita-item">Mantenimiento antifaz (toxina botulínica)</div>
+            <div class="cita-item">Hydrodermoabrasión + luz LED facial</div>
+          </div>
+        </div>
+
+        <a href="#contacto" class="btn btn-gold plan-cta btn-lg">
+          Quiero Full Harmony
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+      <!-- RADIANT GLOW -->
+      <article class="plan plan-std reveal reveal-d3" aria-labelledby="plan-glow">
+        <div class="plan-eyebrow">Membresía Derma</div>
+        <h3 class="plan-name" id="plan-glow">Radiant<br>Glow</h3>
+        <p class="plan-tagline">Hidratación extrema anual para tu piel. 12 sesiones mensuales de revitalización cutánea.</p>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li class="plan-feature">
+            <div class="plan-check">✓</div>
+            <span><strong>12 sesiones</strong> de revitalización cutánea (1 por mes)</span>
+          </li>
+          <li class="plan-feature">
+            <div class="plan-check">✓</div>
+            <span>3 sesiones de células madre faciales</span>
+          </li>
+          <li class="plan-feature">
+            <div class="plan-check">✓</div>
+            <span>3 sesiones de NCPR (rejuvenecimiento periocular)</span>
+          </li>
+          <li class="plan-feature">
+            <div class="plan-check">✓</div>
+            <span>3 sesiones de ADN Salmón (esperma)</span>
+          </li>
+          <li class="plan-feature">
+            <div class="plan-check">✓</div>
+            <span>3 sesiones de Smartpeel personalizado a tu piel</span>
+          </li>
+          <li class="plan-feature">
+            <div class="plan-check">✓</div>
+            <span>1 aplicación de Skinbooster a mitad del año (full rostro)</span>
+          </li>
+          <li class="plan-feature">
+            <div class="plan-check">✓</div>
+            <span>12 sesiones de limpieza profunda + extracción de impurezas + Hydrodermoabrasión</span>
+          </li>
+        </ul>
+        <a href="#contacto" class="btn btn-ghost-gold plan-cta">
+          Quiero Radiant Glow
+        </a>
+      </article>
+
+    </div>
+
+    <p class="plans-note reveal">
+      Todos los planes incluyen <strong>consulta de diseño de protocolo personalizado</strong> con el Dr. Alex Alba.<br>
+      Pago en una exhibición o en mensualidades sin intereses. <strong>Cupos limitados por mes.</strong>
+    </p>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contact" id="contacto" aria-labelledby="contact-titulo">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="eyebrow">Agenda tu consulta</div>
+        <h2 class="display display-lg" id="contact-titulo">El primer paso<br>es conocernos.</h2>
+        <p class="body-lg">La consulta inicial es una valoración médica personalizada donde diseñaremos juntos tu protocolo. Sin compromisos, sin presión. Solo resultados naturales.</p>
+        <div class="contact-details">
+          <div class="contact-row">
+            <div class="contact-icon">◈</div>
+            <div>
+              <div class="contact-label">Ubicación</div>
+              <div class="contact-value">Tuxpan 8, Colonia Roma Sur, CDMX</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">◉</div>
+            <div>
+              <div class="contact-label">Sitio web</div>
+              <div class="contact-value">dralexalba-alay.mx</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">✦</div>
+            <div>
+              <div class="contact-label">Horario de atención</div>
+              <div class="contact-value">Lunes a Sábado · 9:00 a 19:00 hrs</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">✶</div>
+            <div>
+              <div class="contact-label">Teléfono</div>
+              <div class="contact-value">55 7845 3746</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card reveal reveal-d2">
+        <h3 class="form-title">Reserva tu valoración</h3>
+        <p class="form-sub">Respuesta garantizada en menos de 24 horas hábiles</p>
+        <form action="#" method="post" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="nombre">Nombre</label>
+              <input class="form-input" type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="given-name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="apellido">Apellido</label>
+              <input class="form-input" type="text" id="apellido" name="apellido" placeholder="Apellido" autocomplete="family-name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Correo electrónico</label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="tu@correo.com" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="tel">Teléfono / WhatsApp</label>
+            <input class="form-input" type="tel" id="tel" name="tel" placeholder="+52 55 0000 0000" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="interes">¿Qué membresía o tratamiento te interesa?</label>
+            <select class="form-select" id="interes" name="interes">
+              <option value="">Seleccionar…</option>
+              <optgroup label="Beauty Memberships">
+                <option value="botox-anual">Botox Anual</option>
+                <option value="radiant-glow">Radiant Glow</option>
+                <option value="full-harmony">Full Harmony</option>
+              </optgroup>
+              <optgroup label="Tratamientos Faciales">
+                <option value="rinomodelacion">Rinomodelación</option>
+                <option value="labios">Aumento de labios</option>
+                <option value="armonizacion">Armonización facial completa</option>
+                <option value="bichectomia">Bichectomía</option>
+                <option value="skinbooster">Skinbooster / Ojeras</option>
+              </optgroup>
+              <optgroup label="Dermatología & Corporal">
+                <option value="celulas-madre">Células madre faciales/capilares</option>
+                <option value="corporal">Remodelación corporal</option>
+                <option value="laser">Depilación láser CRYSTAL 3D</option>
+              </optgroup>
+              <option value="valoracion">Solo quiero una valoración general</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="mensaje">Mensaje (opcional)</label>
+            <textarea class="form-textarea" id="mensaje" name="mensaje" placeholder="Cuéntame brevemente sobre tu objetivo…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold btn-lg form-submit" id="submitBtn">
+            Solicitar mi consulta
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <div class="divider-or">o escríbeme directo</div>
+          <a href="https://wa.me/5255784537467?text=Hola%20Dr.%20Alex%20Alba%2C%20me%20gustar%C3%ADa%20agendar%20una%20consulta." class="wa-btn" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp directo con el Dr. Alba
+          </a>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo-mark">
+          <svg class="logo-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <circle cx="16" cy="16" r="3" fill="hsl(40,85%,58%)"/>
+            <circle cx="16" cy="5"  r="2" fill="hsl(40,85%,58%)" opacity=".7"/>
+            <circle cx="16" cy="27" r="2" fill="hsl(40,85%,58%)" opacity=".7"/>
+            <circle cx="5"  cy="16" r="2" fill="hsl(40,85%,58%)" opacity=".7"/>
+            <circle cx="27" cy="16" r="2" fill="hsl(40,85%,58%)" opacity=".7"/>
+            <circle cx="7.5"  cy="7.5"  r="1.5" fill="hsl(40,85%,58%)" opacity=".5"/>
+            <circle cx="24.5" cy="7.5"  r="1.5" fill="hsl(40,85%,58%)" opacity=".5"/>
+            <circle cx="7.5"  cy="24.5" r="1.5" fill="hsl(40,85%,58%)" opacity=".5"/>
+            <circle cx="24.5" cy="24.5" r="1.5" fill="hsl(40,85%,58%)" opacity=".5"/>
+            <line x1="16" y1="7" x2="16" y2="13" stroke="hsl(40,85%,58%)" stroke-width=".8" opacity=".5"/>
+            <line x1="16" y1="19" x2="16" y2="25" stroke="hsl(40,85%,58%)" stroke-width=".8" opacity=".5"/>
+            <line x1="7" y1="16" x2="13" y2="16" stroke="hsl(40,85%,58%)" stroke-width=".8" opacity=".5"/>
+            <line x1="19" y1="16" x2="25" y2="16" stroke="hsl(40,85%,58%)" stroke-width=".8" opacity=".5"/>
+          </svg>
+          <div class="logo-text-wrap">
+            <span class="logo-name">Dr. Alex Alba</span>
+            <span class="logo-sub">ALAY · Aesthetic Medicine</span>
+          </div>
+        </div>
+        <p class="footer-brand-desc">Medicina estética avanzada con resultados naturales. Roma Sur, Ciudad de México. Tu mejor versión empieza hoy.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Membresías</p>
+        <ul class="footer-links">
+          <li><a href="#membresias">Botox Anual</a></li>
+          <li><a href="#membresias">Radiant Glow</a></li>
+          <li><a href="#membresias">Full Harmony</a></li>
+          <li><a href="#contacto">Agendar consulta</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Tratamientos</p>
+        <ul class="footer-links">
+          <li><a href="#tratamientos">Armonización facial</a></li>
+          <li><a href="#tratamientos">Rinomodelación</a></li>
+          <li><a href="#tratamientos">Toxina botulínica</a></li>
+          <li><a href="#tratamientos">Células madre</a></li>
+          <li><a href="#tratamientos">Depilación láser</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Clínica</p>
+        <ul class="footer-links">
+          <li><a href="#">Tuxpan 8, Roma Sur</a></li>
+          <li><a href="#">55 7845 3746</a></li>
+          <li><a href="#">Blog médico</a></li>
+          <li><a href="#">Aviso de privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Dr. Alex Alba · ALAY Aesthetic Medicine · dralexalba-alay.mx</span>
+      <span class="footer-cert">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        Médico Certificado · Cédula Profesional SEP · UNAM
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Nav scroll */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+}, { passive: true });
+
+/* Reveal on scroll */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+/* Form */
+document.querySelector('form').addEventListener('submit', e => {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  btn.innerHTML = '¡Solicitud enviada! Te contactamos pronto ✓';
+  btn.style.background = 'hsl(142 62% 40%)';
+  btn.disabled = true;
+});
+</script>
+</body>
+</html>

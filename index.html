@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dr. Alex Alba · ALAY Aesthetic Medicine · Algo increíble está por llegar. Roma Sur, CDMX.">
+  <title>Dr. Alex Alba · ALAY Aesthetic Medicine — Próximamente</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --noir:     hsl(220,18%,5%);
+  --noir-2:   hsl(220,14%,9%);
+  --noir-3:   hsl(220,12%,14%);
+  --gold:     hsl(32,65%,52%);
+  --gold-lt:  hsl(35,70%,65%);
+  --gold-dk:  hsl(28,62%,35%);
+  --gold-dim: hsl(30,50%,28%);
+  --white:    hsl(0,0%,100%);
+  --text-2:   hsl(220,6%,68%);
+  --text-3:   hsl(220,5%,44%);
+  --border:   hsl(220,10%,16%);
+  --ease:     cubic-bezier(0.16,1,0.3,1);
+}
+html{height:100%;}
+body{
+  font-family:'Outfit',sans-serif;
+  font-weight:300;
+  background:var(--noir);
+  color:var(--white);
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  overflow-x:hidden;
+  position:relative;
+}
+
+/* Grain */
+body::after{
+  content:'';position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:50;
+}
+
+/* Glow de fondo */
+.bg-glow{
+  position:fixed;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:800px;height:800px;
+  background:radial-gradient(circle,hsl(32 65% 52%/.08) 0%,transparent 65%);
+  pointer-events:none;
+}
+.bg-glow-2{
+  position:fixed;
+  top:20%;right:-200px;
+  width:500px;height:500px;
+  background:radial-gradient(circle,hsl(32 65% 52%/.05) 0%,transparent 70%);
+  pointer-events:none;
+}
+
+/* Línea dorada superior */
+.top-line{
+  position:fixed;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,hsl(30,50%,38%) 20%,hsl(35,70%,62%) 50%,hsl(32,65%,52%) 70%,transparent);
+  z-index:100;
+}
+
+/* CONTENIDO PRINCIPAL */
+.page{
+  width:100%;max-width:600px;
+  padding:2rem;
+  text-align:center;
+  display:flex;flex-direction:column;
+  align-items:center;gap:0;
+  animation:fadeUp .9s var(--ease) both;
+  position:relative;z-index:10;
+}
+
+/* Logo */
+.logo-wrap{
+  display:flex;flex-direction:column;
+  align-items:center;gap:.6rem;
+  margin-bottom:3rem;
+}
+.logo-icon{width:48px;height:48px;}
+.logo-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.6rem;font-weight:400;
+  color:var(--white);letter-spacing:.02em;
+}
+.logo-sub{
+  font-size:.6rem;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);
+}
+
+/* Eyebrow */
+.eyebrow{
+  font-size:.62rem;font-weight:600;
+  letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1.5rem;
+  display:flex;align-items:center;gap:1rem;
+}
+.eyebrow::before,.eyebrow::after{
+  content:'';width:32px;height:1px;background:var(--gold-dim);
+}
+
+/* Headline */
+.headline{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.8rem,8vw,5rem);
+  font-weight:300;line-height:1.08;
+  letter-spacing:-.02em;
+  color:var(--white);
+  margin-bottom:1rem;
+}
+.headline em{font-style:italic;color:var(--gold);}
+
+/* Subhead */
+.subhead{
+  font-size:clamp(.9rem,2vw,1.05rem);
+  color:var(--text-2);line-height:1.8;
+  max-width:44ch;margin:0 auto 2.5rem;
+}
+
+/* CONTADOR */
+.countdown{
+  display:flex;gap:1.5rem;
+  justify-content:center;
+  margin-bottom:3rem;
+}
+.countdown-unit{
+  display:flex;flex-direction:column;
+  align-items:center;gap:.3rem;
+}
+.countdown-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:3rem;font-weight:300;
+  color:var(--white);line-height:1;
+  min-width:60px;text-align:center;
+  background:var(--noir-3);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:.4rem .6rem;
+  transition:color .3s;
+}
+.countdown-lbl{
+  font-size:.55rem;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:var(--text-3);
+}
+.countdown-sep{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;color:var(--gold-dim);
+  align-self:flex-start;margin-top:.6rem;
+}
+
+/* FORM CAPTURA */
+.lead-wrap{
+  width:100%;max-width:420px;
+  background:var(--noir-2);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:2rem;
+  margin-bottom:2.5rem;
+}
+.lead-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.3rem;font-weight:400;
+  color:var(--gold-lt);
+  margin-bottom:.4rem;
+}
+.lead-sub{
+  font-size:.75rem;color:var(--text-3);
+  margin-bottom:1.5rem;line-height:1.6;
+}
+.lead-field{
+  margin-bottom:.75rem;
+}
+.lead-label{
+  display:block;font-size:.58rem;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:var(--text-3);margin-bottom:4px;
+}
+.lead-input{
+  width:100%;padding:.75rem 1rem;
+  background:var(--noir-3);
+  border:1px solid var(--border);
+  border-radius:10px;
+  font-family:'Outfit',sans-serif;
+  font-size:.875rem;color:var(--white);
+  outline:none;appearance:none;
+  transition:border-color .2s,box-shadow .2s;
+}
+.lead-input:focus{
+  border-color:var(--gold-dim);
+  box-shadow:0 0 0 3px hsl(32 65% 52%/.1);
+}
+.lead-input::placeholder{color:var(--text-3);}
+.lead-select option{background:var(--noir-3);}
+.lead-btn{
+  width:100%;padding:.9rem;
+  background:var(--gold);color:var(--noir);
+  border:none;border-radius:10px;
+  font-family:'Outfit',sans-serif;
+  font-size:.8rem;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;
+  cursor:pointer;margin-top:.25rem;
+  transition:background .2s,transform .25s var(--ease),box-shadow .25s;
+}
+.lead-btn:hover{
+  background:var(--gold-lt);
+  transform:translateY(-2px);
+  box-shadow:0 8px 32px hsl(32 65% 52%/.4);
+}
+.lead-feedback{
+  margin-top:.75rem;font-size:.82rem;
+  color:var(--gold);min-height:1.5em;
+  font-weight:500;text-align:center;
+}
+
+/* Whatsapp link */
+.wa-link{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-size:.75rem;color:var(--text-3);
+  margin-top:.75rem;
+  transition:color .2s;
+  text-decoration:none;
+}
+.wa-link:hover{color:hsl(142,60%,55%);}
+.wa-link svg{width:15px;height:15px;}
+
+/* Pills de info */
+.info-pills{
+  display:flex;gap:.75rem;flex-wrap:wrap;
+  justify-content:center;
+  margin-bottom:2.5rem;
+}
+.pill{
+  display:flex;align-items:center;gap:.4rem;
+  font-size:.62rem;font-weight:500;
+  letter-spacing:.06em;
+  color:var(--text-3);
+  background:var(--noir-3);
+  border:1px solid var(--border);
+  border-radius:999px;
+  padding:.35rem .85rem;
+}
+.pill-dot{
+  width:5px;height:5px;border-radius:50%;
+  background:var(--gold);
+  box-shadow:0 0 6px hsl(32 65% 52%/.6);
+}
+
+/* Footer */
+.page-footer{
+  font-size:.62rem;color:var(--text-3);
+  margin-top:1rem;
+}
+
+/* Animación */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(24px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+@media(max-width:480px){
+  .countdown{gap:1rem;}
+  .countdown-num{font-size:2.2rem;min-width:48px;}
+  .lead-wrap{padding:1.5rem;}
+}
+</style>
+</head>
+<body>
+
+<div class="top-line"></div>
+<div class="bg-glow"></div>
+<div class="bg-glow-2"></div>
+
+<main class="page" role="main">
+
+  <!-- LOGO -->
+  <div class="logo-wrap">
+    <svg class="logo-icon" viewBox="0 0 48 48" fill="none" aria-label="Dr. Alex Alba · ALAY Aesthetic Medicine">
+      <circle cx="24" cy="24" r="4" fill="hsl(32,65%,52%)"/>
+      <circle cx="24" cy="7"  r="2.8" fill="hsl(32,65%,52%)" opacity=".7"/>
+      <circle cx="24" cy="41" r="2.8" fill="hsl(32,65%,52%)" opacity=".7"/>
+      <circle cx="7"  cy="24" r="2.8" fill="hsl(32,65%,52%)" opacity=".7"/>
+      <circle cx="41" cy="24" r="2.8" fill="hsl(32,65%,52%)" opacity=".7"/>
+      <circle cx="11" cy="11" r="2" fill="hsl(32,65%,52%)" opacity=".45"/>
+      <circle cx="37" cy="11" r="2" fill="hsl(32,65%,52%)" opacity=".45"/>
+      <circle cx="11" cy="37" r="2" fill="hsl(32,65%,52%)" opacity=".45"/>
+      <circle cx="37" cy="37" r="2" fill="hsl(32,65%,52%)" opacity=".45"/>
+      <line x1="24" y1="10" x2="24" y2="20" stroke="hsl(32,65%,52%)" stroke-width="1" opacity=".45"/>
+      <line x1="24" y1="28" x2="24" y2="38" stroke="hsl(32,65%,52%)" stroke-width="1" opacity=".45"/>
+      <line x1="10" y1="24" x2="20" y2="24" stroke="hsl(32,65%,52%)" stroke-width="1" opacity=".45"/>
+      <line x1="28" y1="24" x2="38" y2="24" stroke="hsl(32,65%,52%)" stroke-width="1" opacity=".45"/>
+      <line x1="13" y1="13" x2="20" y2="20" stroke="hsl(32,65%,52%)" stroke-width=".8" opacity=".3"/>
+      <line x1="28" y1="28" x2="35" y2="35" stroke="hsl(32,65%,52%)" stroke-width=".8" opacity=".3"/>
+      <line x1="35" y1="13" x2="28" y2="20" stroke="hsl(32,65%,52%)" stroke-width=".8" opacity=".3"/>
+      <line x1="13" y1="35" x2="20" y2="28" stroke="hsl(32,65%,52%)" stroke-width=".8" opacity=".3"/>
+    </svg>
+    <div class="logo-name">Dr. Alex Alba</div>
+    <div class="logo-sub">ALAY · Aesthetic Medicine</div>
+  </div>
+
+  <!-- EYEBROW -->
+  <div class="eyebrow">Próximamente · dralexalba-alay.mx</div>
+
+  <!-- HEADLINE -->
+  <h1 class="headline">
+    Tu mejor versión<br>
+    <em>empieza aquí.</em>
+  </h1>
+
+  <p class="subhead">
+    Estamos preparando algo especial para ti. La nueva experiencia digital del Dr. Alex Alba y sus Beauty Memberships estará lista muy pronto.
+  </p>
+
+  <!-- CONTADOR -->
+  <div class="countdown" aria-label="Cuenta regresiva al lanzamiento">
+    <div class="countdown-unit">
+      <div class="countdown-num" id="cd-dias">07</div>
+      <div class="countdown-lbl">Días</div>
+    </div>
+    <div class="countdown-sep" aria-hidden="true">:</div>
+    <div class="countdown-unit">
+      <div class="countdown-num" id="cd-hrs">00</div>
+      <div class="countdown-lbl">Horas</div>
+    </div>
+    <div class="countdown-sep" aria-hidden="true">:</div>
+    <div class="countdown-unit">
+      <div class="countdown-num" id="cd-min">00</div>
+      <div class="countdown-lbl">Minutos</div>
+    </div>
+    <div class="countdown-sep" aria-hidden="true">:</div>
+    <div class="countdown-unit">
+      <div class="countdown-num" id="cd-seg">00</div>
+      <div class="countdown-lbl">Segundos</div>
+    </div>
+  </div>
+
+  <!-- PILLS INFO -->
+  <div class="info-pills" aria-label="Características del sitio">
+    <div class="pill"><div class="pill-dot"></div>Beauty Memberships</div>
+    <div class="pill"><div class="pill-dot"></div>Armonización Facial</div>
+    <div class="pill"><div class="pill-dot"></div>Resultados Reales</div>
+    <div class="pill"><div class="pill-dot"></div>Roma Sur · CDMX</div>
+  </div>
+
+  <!-- CAPTURA DE LEADS -->
+  <div class="lead-wrap">
+    <h2 class="lead-title">Sé el primero en saberlo</h2>
+    <p class="lead-sub">Déjanos tu WhatsApp y te avisamos el día que lancemos. Además recibirás acceso anticipado a nuestras Beauty Memberships con precio especial de preventa.</p>
+
+    <form id="lead-form" novalidate>
+      <div class="lead-field">
+        <label class="lead-label" for="cs-name">Tu nombre</label>
+        <input class="lead-input" type="text" id="cs-name" placeholder="Nombre completo" required autocomplete="given-name">
+      </div>
+      <div class="lead-field">
+        <label class="lead-label" for="cs-wa">WhatsApp</label>
+        <input class="lead-input" type="tel" id="cs-wa" placeholder="+52 55 0000 0000" required autocomplete="tel">
+      </div>
+      <div class="lead-field">
+        <label class="lead-label" for="cs-int">¿Qué te interesa más?</label>
+        <select class="lead-input lead-select" id="cs-int">
+          <option value="">Seleccionar…</option>
+          <option>Beauty Membership Botox Anual</option>
+          <option>Beauty Membership Radiant Glow</option>
+          <option>Beauty Membership Full Harmony</option>
+          <option>Armonización facial</option>
+          <option>Adelgazamiento facial</option>
+          <option>Rinomodelación</option>
+          <option>Quiero conocer todas las opciones</option>
+        </select>
+      </div>
+      <button type="submit" class="lead-btn" id="cs-btn">
+        Avísame cuando lancen 🚀
+      </button>
+      <p class="lead-feedback" id="cs-fb" role="status" aria-live="polite"></p>
+    </form>
+
+    <a class="wa-link" href="https://wa.me/525578453746?text=Hola%20Dr.%20Alex%20Alba%2C%20vi%20que%20pronto%20abren%20su%20nueva%20p%C3%A1gina.%20Me%20gustar%C3%ADa%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a9 9 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413A11.815 11.815 0 0012.05 0z"/></svg>
+      O escríbenos directamente por WhatsApp
+    </a>
+  </div>
+
+  <p class="page-footer">© 2025 Dr. Alex Alba · ALAY Aesthetic Medicine · Roma Sur, CDMX</p>
+
+</main>
+
+<script>
+// ===== CONTADOR — 7 días a partir de hoy =====
+const launch = new Date();
+launch.setDate(launch.getDate() + 7);
+
+function pad(n){ return String(n).padStart(2,'0'); }
+
+function updateCountdown(){
+  const now  = new Date();
+  const diff = launch - now;
+  if(diff <= 0){
+    document.getElementById('cd-dias').textContent = '00';
+    document.getElementById('cd-hrs').textContent  = '00';
+    document.getElementById('cd-min').textContent  = '00';
+    document.getElementById('cd-seg').textContent  = '00';
+    return;
+  }
+  const d = Math.floor(diff / 86400000);
+  const h = Math.floor((diff % 86400000) / 3600000);
+  const m = Math.floor((diff % 3600000)  / 60000);
+  const s = Math.floor((diff % 60000)    / 1000);
+  document.getElementById('cd-dias').textContent = pad(d);
+  document.getElementById('cd-hrs').textContent  = pad(h);
+  document.getElementById('cd-min').textContent  = pad(m);
+  document.getElementById('cd-seg').textContent  = pad(s);
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// ===== FORM =====
+document.getElementById('lead-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('cs-name').value.trim();
+  const wa   = document.getElementById('cs-wa').value.trim();
+  const fb   = document.getElementById('cs-fb');
+  const btn  = document.getElementById('cs-btn');
+  if(!name || !wa){ fb.textContent = 'Por favor ingresa tu nombre y WhatsApp.'; return; }
+  btn.disabled = true;
+  btn.textContent = 'Enviando…';
+  setTimeout(()=>{
+    fb.textContent = `¡Listo, ${name.split(' ')[0]}! Te avisamos el día del lanzamiento 🙌`;
+    btn.textContent = 'Registrado ✓';
+    btn.style.background = 'hsl(142,55%,42%)';
+  }, 700);
+});
+</script>
+</body>
+</html>
